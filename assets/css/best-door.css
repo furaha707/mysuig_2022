@@ -1,0 +1,121 @@
+/* Made by Masstige */
+.sub-main {
+  overflow-x: hidden;
+}
+
+.section2 .qna__contents {
+  background-color: #f7f7f7;
+}
+
+.section3 {
+  background-color: #d6e2e8;
+}
+.section3 .door-process {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.875rem;
+}
+@media all and (max-width: 1200px) {
+  .section3 .door-process {
+    margin: 0 -1.875rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .section3 .door-process {
+    margin: 0 -4vw;
+  }
+}
+@media all and (max-width: 375px) {
+  .section3 .door-process {
+    margin: 0 -5vw;
+  }
+}
+.section3 .door-process .item {
+  flex: 1 0 16.6666666667%;
+  max-width: 16.6666666667%;
+  padding: 0 1.875rem;
+}
+@media all and (max-width: 1200px) {
+  .section3 .door-process .item {
+    padding: 0 1.875rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .section3 .door-process .item {
+    flex: 1 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    padding: 0.625rem 8vw;
+    margin-bottom: 1.25rem;
+  }
+}
+@media all and (max-width: 576px) {
+  .section3 .door-process .item {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+}
+@media all and (max-width: 375px) {
+  .section3 .door-process .item {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+.section3 .door-process .item .circle {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+}
+.section3 .door-process .item .circle .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+.section3 .door-process .item .circle .icon img {
+  width: 3.875rem;
+  height: 3.625rem;
+}
+
+.step {
+  width: 2.875rem;
+  height: 2.875rem;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #72a3eb;
+  margin: 0 auto;
+  line-height: 2.9375rem;
+  font-size: 1rem;
+  font-family: "GmarketSans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  font-weight: 500;
+}
+
+.section5 .qna__contents .d-flex {
+  width: 100%;
+  max-width: 54.375rem;
+  margin: 0 auto;
+}
+@media all and (max-width: 768px) {
+  .section5 .qna__contents .d-flex {
+    max-width: 100%;
+  }
+}
+.section5 .qna__contents .d-flex .text-wrap {
+  min-height: 9.0625rem;
+}
+@media all and (max-width: 768px) {
+  .section5 .qna__contents .d-flex .text-wrap {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 375px) {
+  .section5 .qna__contents .d-flex .text-wrap {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=best-door.css.map */

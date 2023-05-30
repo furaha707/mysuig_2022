@@ -1,0 +1,58 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    // "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "newUntitledFile",
+    "tslint.autoFixOnSave": true,
+    //beautify////////////////////////////////////////////////
+    // 포매터 : prettier
+    "editor.tabSize": 2,
+    //"editor.formatOnSave": true, // 포매터 사용
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //언어별 포매터 사용
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[php]": {
+      "editor.formatOnSave": false
+    },
+    "[asp]": {
+      "editor.formatOnSave": false
+    },
+    "[html]": {
+      "editor.formatOnSave": true
+    },
+    "[scss]": {
+      "editor.formatOnSave": true
+    },
+    // 포매터 : prettier
+    "prettier.enable": true,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true, // jsx 표현식에서 ' 사용
+    "prettier.semi": true, //세미콜론 붙임
+    "prettier.useTabs": true, //탭 사용
+    // "editor.detectIndentation": false,
+    "prettier.tabWidth": 2, //탭 크기
+    "prettier.endOfLine": "crlf", //개행문자 고정(개발OS이슈)
+    "prettier.proseWrap": "always",
+    "prettier.printWidth": 10000000000000, //문자열 넘어가면 자동으로 wrap 되는 것 막음
+    "prettier.htmlWhitespaceSensitivity": "css",
+    "[php]": {
+      "editor.formatOnSave": false,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.ignoreMissingGitWarning": false,
+    "php.suggest.basic": false,
+    "php.validate.executablePath": "",
+    "security.workspace.trust.untrustedFiles": "open",
+    "html.format.templating": false,
+    "html-to-css-autocompletion.getSelectorsFromFileTypes": [
+      "html",
+      "php"
+    ],
+    "todohighlight.isEnable": true
+    //"php.validate.executablePath": ""
+  }

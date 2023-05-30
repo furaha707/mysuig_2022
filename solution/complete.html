@@ -1,0 +1,195 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/solution.min.css" />
+	</head>
+
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section section1">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-start align-items-lg-center py-25 flex-column flex-lg-row">
+						<div>
+							<h2 class="common-text--42 font-weight-normal">
+								우리집에 맞는<br class="d-block d-lg-none" />
+								<strong>중문 찾기</strong>
+							</h2>
+							<p class="common-text--20 text-muted">어떤 공간의 분위기를 원하는가?</p>
+						</div>
+						<div class="d-flex buttons mt-10 mt-lg-0">
+							<a class="modern" href="#modern">모던</a>
+							<a class="classic pl-10" href="#classic">Classic</a>
+							<a class="stylish pl-10" href="#stylish">Stylish</a>
+						</div>
+					</div>
+				</div>
+				<!-- S : modern-->
+				<div id="modern" class="py-40">
+					<div class="container">
+						<div class="d-flex flex-column flex-lg-row gap4">
+							<div class="modern-item1">
+								<h2 class="tit">Modern</h2>
+								<p class="desc">
+									깔끔하고 고급스럽게 다양한 주거공간에<br />
+									잘 어울리는 아이지도어의 모던 스타일을 만나보세요.
+								</p>
+								<p class="mt-25"><img src="../assets/images/sub/modern1.jpg" alt="모던" /></p>
+							</div>
+							<div class="modern-item2">
+								<img src="../assets/images/sub/modern2.jpg" alt="모던" class="mt-0 mt-lg-40" />
+							</div>
+							<div class="modern-item3">
+								<img src="../assets/images/sub/modern3.jpg" alt="모던" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E : modern-->
+
+				<!-- S : classic-->
+				<div id="classic" class="py-40">
+					<div class="container">
+						<div class="d-flex flex-column">
+							<div class="classic-item1 pb-20">
+								<h2 class="tit">Classic</h2>
+								<p class="desc">
+									때로는 고전적이게 때로는 품위있게<br />
+									아이지 도어의 클래식 스타일을 만나보세요.
+								</p>
+							</div>
+							<div class="classic-item2 d-flex align-items-start align-items-lg-end gap3 pb-10 flex-column flex-lg-row">
+								<img src="../assets/images/sub/classic1.jpg" alt="클래식" />
+								<img src="../assets/images/sub/classic2.jpg" alt="클래식" />
+							</div>
+							<div class="classic-item3 d-flex align-items-start gap3 ml-0 ml-lg-35 flex-column flex-lg-row">
+								<img src="../assets/images/sub/classic3.jpg" alt="클래식" />
+								<img src="../assets/images/sub/classic4.jpg" alt="클래식" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E : classic-->
+
+				<!-- S : stylish-->
+				<div id="stylish" class="py-40">
+					<div class="container">
+						<div class="stylish-item1 mb-5">
+							<h2 class="tit">Stylish</h2>
+							<p class="desc">
+								독특하고 세련되게 자기만의 주거공간에<br />
+								아이지도어의 스타일리쉬 스타일을 만나보세요.
+							</p>
+						</div>
+						<div class="d-flex justify-content-between align-items-center flex-column flex-lg-row">
+							<div class="stylish-item2 d-grid">
+								<img src="../assets/images/sub/stylish1.jpg" alt="스타일" />
+								<img src="../assets/images/sub/stylish2.jpg" alt="스타일" />
+								<img src="../assets/images/sub/stylish3.jpg" alt="스타일" />
+								<img src="../assets/images/sub/stylish4.jpg" alt="스타일" />
+							</div>
+							<div class="stylish-item3">
+								<img src="../assets/images/sub/stylish5.jpg" alt="스타일" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E : stylish-->
+			</section>
+		</main>
+		<!-- E : Main -->
+		<!-- S : quick-btn -->
+		<div class="quick-btn">
+			<div class="counsel d-flex flex-column justify-content-center align-items-center mb-20">
+				<i class="bi-chat-left-dots"></i>
+				<span>상담하기</span>
+			</div>
+			<button type="button" class="top d-flex flex-column align-items-center w-100 mt-3" onclick="$('html, body').animate({scrollTop: $('body').offset().top}, 500);">
+				<i class="xi-angle-up"></i>
+				<span>TOP</span>
+			</button>
+		</div>
+		<!-- E : quick-btn -->
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			// $(".history-list").on('mousewheel', function (e) {
+
+			//   var wheelDelta = e.originalEvent.wheelDelta;
+
+			//   if (wheelDelta > 0) {
+			//     console.log("up");
+			//     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+			//   } else {
+			//     console.log("down");
+			//     $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+			//   }
+
+			// });
+
+			// $(function () {
+			//   $(".history-list").mousewheel(function (event, d) {
+
+			//     if (d > 0) {
+			//       var s = $(window).scrollLeft();
+			//       s -= 150; //이게 스크롤 올린거
+
+			//     } else if (d < 0) { //이게 스크롤 내린거
+			//       var s = $(window).scrollLeft();
+			//       s += 150;
+			//     }
+			//     $("html, body").stop().animate({
+			//       "scrollLeft": s
+			//     }, 10);
+			//   });
+
+			// });
+
+			// var modern = ('#modern').offset().top;
+			// var classic = ('#classic').offset().top;
+			// var stylish = ('#stylish').offset().top;
+
+			// window.scroll({
+			//   top: 100,
+			//   left: 100,
+			//   behavior: 'smooth'
+			// });
+
+			// $(".modern").click(function () {
+			//   $("html, body").animate({ scrollTop: 50 + 'px' }, 500);
+
+			//   console.log(modern);
+			// });
+
+			$(document).ready(function ($) {
+				$('.modern').click(function (event) {
+					event.preventDefault();
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
+				});
+				$('.classic').click(function (event) {
+					event.preventDefault();
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
+				});
+				$('.stylish').click(function (event) {
+					event.preventDefault();
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 400);
+				});
+			});
+		</script>
+	</body>
+</html>

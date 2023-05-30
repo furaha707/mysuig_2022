@@ -1,0 +1,122 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+
+	<body class="mypage-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : nav--mypage -->
+		<? include "../include/mypage-sub-nav.html" ?>
+		<!-- E : nav--mypage -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section py-20">
+				<div class="container">
+					<h1 class="sub-main__title mb-10">마이페이지</h1>
+					<div class="d-block d-lg-flex">
+						<ul class="mypage-list d-lg-block d-none">
+							<li class="list"><a href="./changeinfo_check.html">내정보수정</a></li>
+							<li class="list active"><a href="./wishlist.html">위시리스트</a></li>
+							<li class="list"><a href="./inquiry.html">문의내역</a></li>
+							<li class="list"><a href="./logout.html">회원탈퇴</a></li>
+						</ul>
+						<div class="wish-wrap wishlist-wrap">
+							<div class="d-flex flex-md-row flex-column justify-content-between align-items-md-center pb-4">
+								<p class="common-text--24 font-weight-bold wish__tit">위시리스트<span class="blue-dot"></span></p>
+								<p class="text-right wish__txt pt-md-0 pt-2">* 판매종료된 상품의 경우 리스트에서 삭제됩니다.</p>
+							</div>
+
+							<table class="table_board_for type_e">
+								<colgroup>
+									<col width="8%" />
+									<col width="72%;" />
+									<col width="20%;" />
+								</colgroup>
+								<tr class="agree__wrap">
+									<th class="agree_tit--checkbox">
+										<input type="checkbox" id="info30" />
+										<label for="info30"></label>
+									</th>
+									<th class="title">상품/옵션</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" id="info33" />
+										<label for="info33"></label>
+									</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<!-- 상품 이미지 140*170 -->
+											<a class="d-block product-img">
+												<img src="" alt="" />
+											</a>
+											<p class="pl-5">상품명이 노출됩니다. 상품명이 노출됩니다.</p>
+										</div>
+									</td>
+									<td>
+										<div class="d-flex justify-content-end align-items-center">
+											<button type="button" class="btn-type-01">구매하기</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" id="info34" />
+										<label for="info34"></label>
+									</td>
+									<td>
+										<div class="d-flex align-items-center">
+											<!-- 상품 이미지 140*170 -->
+											<a class="d-block product-img">
+												<img src="" alt="" />
+											</a>
+											<p class="pl-5">상품명이 노출됩니다. 상품명이 노출됩니다.</p>
+										</div>
+									</td>
+									<td>
+										<div class="d-flex justify-content-end align-items-center">
+											<button type="button" class="btn-type-01">구매하기</button>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<button type="button" class="mypage-btn2 py-4 mt-6">선택삭제</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			$('.agree_tit--checkbox').click(function () {
+				/* 전체동의 체크박스 */
+				if ($('#info30').is(':checked')) {
+					$('#info33').prop('checked', 'true');
+					$('#info34').prop('checked', 'true');
+				}
+
+				var total = $('input[type=checkbox]').length;
+				var checked = $('input[type=checkbox]:checked').length;
+
+				if (total != checked) $('input[type=checkbox]').prop('checked', false);
+				else $('input[type=checkbox]').prop('checked', true);
+			});
+		</script>
+	</body>
+</html>

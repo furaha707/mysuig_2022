@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+.common-text {
+	&--54 {
+		font-size: em(54);
+	}
+
+	&--50 {
+		font-size: em(50);
+	}
+
+	&--42 {
+		font-size: em(42);
+		letter-spacing: letterSpacing(-30);
+		font-weight: 300;
+	}
+
+	&--40 {
+		font-size: em(40);
+		letter-spacing: letterSpacing(-20);
+	}
+
+	&--26 {
+		font-size: em(26);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--36 {
+		font-size: em(36);
+		line-height: (40/36);
+	}
+
+	&--34 {
+		font-size: em(34);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--32 {
+		font-size: em(32);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--30 {
+		font-size: em(30);
+	}
+
+	&--28 {
+		font-size: em(28);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--26 {
+		font-size: em(26);
+	}
+
+	&--24 {
+		font-size: em(24);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--22 {
+		font-size: em(22);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--20 {
+		font-size: em(20);
+		line-height: (30/18);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--18 {
+		font-size: em(18);
+		line-height: (30/18);
+		letter-spacing: letterSpacing(-30);
+		color: #666666;
+	}
+
+	&--16 {
+		font-size: em(16);
+		line-height: (26/16);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	&--14 {
+		font-size: em(14);
+		letter-spacing: letterSpacing(-30);
+	}
+}
+
+/*common*/
+.text-bold {
+	font-weight: 700;
+}
+.gap1 {
+	gap: 1rem;
+}
+.gap2 {
+	gap: 2rem;
+}
+.gap3 {
+	gap: 3rem;
+}
+.gap4 {
+	gap: 4.5rem;
+}
+.gap5 {
+	gap: 10rem;
+}
+.sub-main__title {
+	text-align: center;
+	font-size: em(36);
+	font-weight: 500;
+	color: #333;
+	letter-spacing: -0.02em;
+}
+.mark {
+	color: red;
+}
+.myform__border {
+	padding-bottom: 0.8em;
+	border-bottom: 2px solid #72a3eb;
+}
+.blue-dot {
+	width: 7px;
+	height: 7px;
+	background-color: #72a3eb;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 8px;
+}
+.mypage-btn {
+	border: 1px solid #72a3eb;
+	background-color: #72a3eb;
+	color: white;
+	max-width: 160px;
+	width: 100%;
+	font-size: em(16);
+	margin: 0 auto;
+	display: block;
+}
+.mypage-btn2 {
+	border: 1px solid #ddd;
+	color: white;
+	color: #666;
+	max-width: 140px;
+	width: 100%;
+	font-size: em(16);
+	display: block;
+}
+
+/* S : mypage-list */
+.mypage-list {
+	flex: 0 0 250px;
+	max-width: 250px;
+	margin-right: 5rem;
+	border-top: 2px solid #72a3eb;
+	.list {
+		border-bottom: 1px solid #ddd;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		font-size: em(17);
+		font-weight: 400;
+		letter-spacing: -0.02em;
+		&.active {
+			color: #72a3eb;
+			font-weight: 500;
+			padding-left: 25px;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: url('../images/sub/arrow-left.png') no-repeat left center;
+				background-size: contain;
+				position: absolute;
+				left: 5%;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+/* E : mypage-list */
+
+/* S : wish list */
+.wish-wrap {
+	flex: 1 1 auto;
+	.wish__txt {
+		color: red;
+		@include mdq-max(md) {
+			font-size: em(14);
+		}
+	}
+	.badge-complete {
+		border-radius: 5px;
+		padding: 0.2em 0.7em;
+		color: #72a3eb;
+		border: 1px solid #72a3eb;
+		text-align: center;
+		font-size: em(14);
+		&::before {
+			display: none !important;
+		}
+	}
+	.table-form-01,
+	.table_board_for {
+		.product-img {
+			width: em(140);
+			background-color: #ddd;
+			@include img-to-bg(percentage(170/140));
+		}
+
+		.badge-waiting {
+			border-radius: 5px;
+			padding: 0.2em 0.7em;
+			color: #666;
+			border: 1px solid #666;
+			text-align: center;
+			font-size: em(14);
+		}
+		// th {
+		// 	text-align: center;
+		// }
+		// th,
+		// td {
+		// 	@include mdq-max(md) {
+		// 		text-align: left;
+
+		// 		@include mdq-max(sm) {
+		// 			border: none;
+		// 		}
+		// 	}
+		// 	&.table-tit {
+		// 		text-align: left;
+		// 	}
+		// 	&.title {
+		// 		text-align: center;
+		// 		@include mdq-max(md) {
+		// 			text-align: left;
+		// 		}
+		// 	}
+		// }
+	}
+	@include mdq-max(lg) {
+		.agree__wrap {
+			display: none;
+		}
+		.agree_tit--checkbox {
+			flex: 1 0 10%;
+		}
+
+		// tr td {
+		// 	flex: 1 1 100%;
+		// 	max-width: 100%;
+		// 	margin: 0 rem(2);
+		// }
+	}
+	&.wishlist-wrap {
+		// .table-form-01 {
+		// 	@include mdq-max(sm) {
+		// 		tr:not(.agree__wrap) {
+		// 			display: block;
+		// 		}
+		// 		td {
+		// 			margin: rem(5) 0;
+		// 		}
+		// 	}
+		// }
+	}
+}
+/* E : 문의내역 view */
+
+.section-inquiry {
+	.table-view-01 {
+		border-top: 2px solid $color-3;
+
+		@include mdq-max(sm) {
+			display: block;
+		}
+
+		.colgroup {
+			@include mdq-max(sm) {
+				display: none;
+			}
+		}
+
+		tbody {
+			@include mdq-max(sm) {
+				display: block;
+			}
+			tr {
+				&:first-child {
+					td {
+						border-top: none;
+					}
+				}
+			}
+		}
+
+		tr td {
+			border-top: 1px solid #ddd;
+			border-bottom: none !important;
+		}
+
+		th,
+		td {
+			padding: 15px 18px !important;
+
+			@include mdq-max(md) {
+				padding: 10px !important;
+			}
+		}
+		.text {
+			background-color: #f8f8f8;
+		}
+		.tit {
+			color: #222;
+			font-weight: 500;
+		}
+		.tit_box {
+			color: #666666;
+			font-weight: 300;
+		}
+		.board-box {
+			padding: 20px 10px;
+			color: #666666;
+		}
+	}
+	.btn-box {
+		@include mdq-max(sm) {
+			position: relative;
+			padding: 0 rem(60);
+		}
+	}
+	.btn-type-01 {
+		background-color: #fff;
+		color: #666;
+		border: 1px solid #ccc;
+		margin: 0 2px;
+		@include mdq-max(sm) {
+			position: relative;
+			width: 100%;
+			max-width: 100%;
+			margin: 5px 0;
+		}
+	}
+}
+
+.inquiry-wrap {
+	.table-form-01 {
+		.col_w {
+			width: 160px;
+		}
+	}
+}
+
+/* S : 문의내역 view */
+
+/* S : change info */
+.link-wrap {
+	.link__tit {
+		border-bottom: 2px solid #72a3eb;
+	}
+	.link-btn1 {
+		border: 1px solid #72a3eb;
+		background-color: #72a3eb;
+		color: white;
+		font-size: em(16);
+		display: block;
+	}
+	.link-btn2 {
+		border: 1px solid #666;
+		background-color: #666;
+		color: white;
+		font-size: em(16);
+		display: block;
+	}
+}
+/* E : change info */

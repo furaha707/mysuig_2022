@@ -1,0 +1,56 @@
+<ul class="skip">
+	<li><a class="link" href="#contents">본문내용 바로가기</a></li>
+	<li><a class="link" href="#header">헤더 바로가기</a></li>
+	<li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header">
+	<div class="container header-wrap">
+		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+			<img class="logo2" src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+			<!-- 			<img class="logo1" src="../assets/images/main/mslogo.png" alt="<?=$SS[sitename]?>" /> -->
+		</a>
+		<div class="nav__bg"></div>
+		<!-- S : navigation -->
+		<nav class="nav">
+			<? include "../include/nav.html" ?>
+		</nav>
+		<ul class="ico-wrapper row align-items-center text-center">
+			<li class="ico col-auto p-5">
+				<a href="https://map.naver.com/v5/entry/place/13183404?c=14125622.2445745,4465002.5572969,13,0,0,0,dh&placePath=%2Fbooking%3FbookingRedirectUrl=https:%2F%2Fm.booking.naver.com%2Fbooking%2F6%2Fbizes%2F278975%26entry=plt" target="_blank">
+					<p class="ico-img"><img src="../assets/images/main/ico-reservation-white.png" alt="쇼룸예약" /></p>
+					<p class="ico-img2"><img src="../assets/images/main/ico-reservation.png" alt="쇼룸예약" /></p>
+					<p class="ico-txt">쇼룸예약</p>
+				</a>
+			</li>
+			<li class="ico col-auto p-5">
+				<a href="#none">
+					<p class="ico-img"><img src="../assets/images/main/ico-catalog-white.png" alt="E-카다로그" /></p>
+					<p class="ico-img2"><img src="../assets/images/main/ico-catalog.png" alt="카다로그" /></p>
+					<p class="ico-txt">E-카다로그</p>
+				</a>
+			</li>
+			<li class="ico col-auto p-5">
+				<a href="../member/login.html">
+					<p class="ico-img"><img src="../assets/images/main/ico-login-white.png" alt="회원" /></p>
+					<p class="ico-img2"><img src="../assets/images/main/ico-login.png" alt="회원 " /></p>
+					<p class="ico-txt">회원</p>
+				</a>
+			</li>
+		</ul>
+		<!-- E : navigation -->
+		<button class="nav-mobile__btn" type="button">
+			<i class="xi-bars"></i>
+		</button>
+	</div>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../assets/images/icon/loading.svg" alt="" />
+</div>
+<!-- E : loading image -->

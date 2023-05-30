@@ -1,0 +1,66 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+
+	<body class="login-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-20" id="contents">
+			<section class="section pt-30 pb-40">
+				<div class="container">
+					<h1 class="sub-main__title mb-20">아이디/비밀번호 찾기</h1>
+					<!-- 로그인 -->
+					<div class="row justify-content-center no-gutters">
+						<div class="find__id text-center col-12 col-lg my-lg-0 my-4">
+							<form class="find__wrap">
+								<p class="find__tit">아이디를 잊으셨나요?</p>
+								<p class="find__txt">가입시 등록하신 정보를 입력하세요.</p>
+								<ul class="find__list">
+									<li>
+										<input type="text" name="uname" id="uname" class="input_for" placeholder="이름" />
+									</li>
+									<li>
+										<input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="휴대전화 번호" />
+									</li>
+								</ul>
+								<button type="submit" class="btn_id py-5">아이디 찾기</button>
+							</form>
+						</div>
+						<div class="find__pw text-center col-12 col-lg my-lg-0 my-4">
+							<form class="find__wrap">
+								<p class="find__tit">비밀번호를 잊으셨나요?</p>
+								<p class="find__txt">가입시 등록하신 정보를 입력하세요.</p>
+								<ul class="find__list">
+									<li>
+										<input type="text" name="uid" id="uid" class="input_for" placeholder="아이디" />
+									</li>
+									<li>
+										<input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="휴대전화 번호" />
+									</li>
+								</ul>
+								<button type="submit" class="btn_pw py-5">비밀번호 찾기</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script></script>
+	</body>
+</html>

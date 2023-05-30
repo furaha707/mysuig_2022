@@ -1,0 +1,95 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '5';
+    $P_dp2 = '1';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/promotion.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-20" id="contents">
+			<section class="section pm-view pb-20 pt-md-0 pt-10">
+				<div class="container">
+					<table class="table-view-01 txt-mt">
+						<caption>
+							<span class="hidden">상세 입니다.</span>
+						</caption>
+						<colgroup>
+							<col width="90px" />
+							<col width="*" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td colspan="3" class="clearfix tit_box">
+									<p class="tit pl-2">제목 노출</p>
+									<p class="tbl_detail_span mt_05 pr-2">
+										<span class="date">2022.01.01</span>
+										<span class="check_01">조회수 101</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3" class="clearfix tit_box">
+									<p class="txt px-2">#인테리어팁</p>
+									<p class="txt px-2">#인터뷰</p>
+									<p class="txt px-2">#브랜드스토리</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<div class="board-box text-center">내용 노출</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="mt_40 text_right board_view_btn_box">
+						<a href="news.html" class="btn-type-01">목록</a>
+					</div>
+					<div class="border-list-type mt_30">
+						<ul>
+							<li>
+								<a href="/news/news_010100.html?bmain=view&amp;uid=16" title="이전">
+									<div class="clearfix">
+										<div class="left list-up-bg list-title">이전</div>
+										<div class="left w-con">이전글</div>
+									</div>
+								</a>
+							</li>
+							<li class="border-none">
+								<a href="#" title="다음">
+									<div class="clearfix">
+										<div class="left list-down-bg list-title">다음</div>
+										<div class="left w-con">다음 글이 없습니다.</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

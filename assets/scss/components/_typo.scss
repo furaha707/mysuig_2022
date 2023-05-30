@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+//공통사용 텍스트 스타일 정의
+
+.common-title {
+	font-weight: 500;
+	letter-spacing: letterSpacing(-50);
+}
+
+.common-text {
+	&--60 {
+		font-size: rem(60);
+	}
+	&--54 {
+		font-size: rem(54);
+	}
+	&--52 {
+		font-size: rem(52);
+	}
+	&--50 {
+		font-size: rem(50);
+	}
+	&--42 {
+		font-size: rem(42);
+		//letter-spacing: letterSpacing(-30);
+		font-weight: 400;
+	}
+	&--40 {
+		font-size: rem(40);
+		letter-spacing: letterSpacing(-20);
+	}
+	&--38 {
+		font-size: rem(38);
+	}
+	&--36 {
+		font-size: rem(36);
+		line-height: (40/36);
+	}
+	&--34 {
+		font-size: rem(34);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--32 {
+		font-size: rem(32);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--30 {
+		font-size: rem(30);
+	}
+	&--28 {
+		font-size: rem(28);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--26 {
+		font-size: rem(26);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--24 {
+		font-size: rem(24);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--22 {
+		font-size: rem(22);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--20 {
+		font-size: rem(20);
+		line-height: (30/18);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--18 {
+		font-size: rem(18);
+		letter-spacing: letterSpacing(-30);
+		color: #666666;
+	}
+	&--16 {
+		font-size: rem(16);
+		line-height: (26/16);
+		letter-spacing: letterSpacing(-30);
+	}
+	&--15 {
+		font-size: rem(15);
+	}
+	&--14 {
+		font-size: rem(14);
+		letter-spacing: letterSpacing(-30);
+	}
+
+	@include mdq-max(lg) {
+		&--60 {
+			font-size: rem(46);
+		}
+		&--54 {
+			font-size: rem(42);
+		}
+		&--52 {
+			font-size: rem(40);
+		}
+		&--50 {
+			font-size: rem(38);
+		}
+		&--42 {
+			font-size: rem(34);
+		}
+		&--40 {
+			font-size: rem(32);
+		}
+		&--38 {
+			font-size: rem(30);
+		}
+		&--36 {
+			font-size: rem(28);
+		}
+		&--34 {
+			font-size: rem(27);
+		}
+		&--32 {
+			font-size: rem(26);
+		}
+		&--30 {
+			font-size: rem(25);
+		}
+		&--28 {
+			font-size: rem(24);
+		}
+		&--26 {
+			font-size: rem(23);
+		}
+		&--24 {
+			font-size: rem(22);
+		}
+		&--22 {
+			font-size: rem(20);
+		}
+		&--20 {
+			font-size: rem(18);
+		}
+		&--18 {
+			font-size: rem(17);
+		}
+		&--16 {
+			font-size: rem(15);
+		}
+		&--15 {
+			font-size: rem(14);
+		}
+		&--14 {
+			font-size: rem(13);
+		}
+	}
+	@include mdq-max(sm) {
+		&--60 {
+			font-size: rem(40);
+		}
+		&--54 {
+			font-size: rem(36);
+		}
+		&--52 {
+			font-size: rem(35);
+		}
+		&--50 {
+			font-size: rem(34);
+		}
+		&--42 {
+			font-size: rem(32);
+		}
+		&--40 {
+			font-size: rem(30);
+		}
+		&--38 {
+			font-size: rem(28);
+		}
+		&--36 {
+			font-size: rem(26);
+		}
+		&--34 {
+			font-size: rem(25);
+		}
+		&--32 {
+			font-size: rem(24);
+		}
+		&--30 {
+			font-size: rem(23);
+		}
+		&--28 {
+			font-size: rem(22);
+		}
+		&--26 {
+			font-size: rem(21);
+		}
+		&--24 {
+			font-size: rem(20);
+		}
+		&--22 {
+			font-size: rem(19);
+		}
+		&--20 {
+			font-size: rem(17);
+		}
+	}
+}
+
+.font-sub--l {
+	font-family: $font-family-sub;
+	font-weight: 300;
+}
+.font-sub--m {
+	font-family: $font-family-sub;
+	font-weight: 500;
+}
+.font-sub--b {
+	font-family: $font-family-sub;
+	font-weight: 700;
+}
+
+.text-line {
+	width: 50px;
+	height: 1px;
+	background-color: #a3a3a3;
+	margin: rem(40) 0;
+
+	@include mdq-max(md) {
+		margin: rem(20) 0;
+	}
+}
+.contents__num {
+	position: relative;
+	color: #f2f2f2;
+	z-index: -1;
+	margin-bottom: -40px;
+	font-size: rem(70);
+	font-weight: 900;
+}
+
+.qna-line {
+	width: 1px;
+	height: 8em;
+	background-color: #aaaaaa;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+}
+.qna__contents {
+	background-color: #f7f7f7;
+	position: relative;
+	z-index: 1;
+}

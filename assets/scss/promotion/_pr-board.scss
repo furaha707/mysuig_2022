@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+//갤러리
+.manu-list {
+	margin: 0 rem(-5);
+	&__item {
+		margin: 0 rem(5);
+		@include mdq-max(lg) {
+			margin: rem(5);
+		}
+		.link {
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			display: block;
+			font-size: em(16);
+			color: #666666;
+			padding: rem(5) rem(10);
+			transition: 0.1s all;
+			&.on,
+			&:hover {
+				color: $color-3;
+				border-color: $color-3;
+			}
+		}
+	}
+}
+
+.img_board_list {
+	margin: 0 -30px;
+	@include mdq-max(xl) {
+		margin: 0 -20px;
+	}
+	@include mdq-max(lg) {
+		margin: 0 -10px;
+	}
+	li {
+		padding: 0 30px 20px;
+
+		@include mdq-max(xl) {
+			padding: 0 20px 20px !important;
+		}
+		@include mdq-max(lg) {
+			padding: 0 10px 20px !important;
+		}
+	}
+	li > a {
+		border: none;
+
+		&:hover {
+			&::before {
+				border: none;
+			}
+			.img_box {
+			}
+		}
+	}
+
+	.img_box {
+		position: relative;
+		.deco {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			color: #fff;
+			font-size: rem(16);
+			font-weight: 300;
+			&--now {
+				background-color: $color-3;
+				padding: rem(5) rem(15);
+			}
+			&--end {
+				background-color: #666666;
+				padding: rem(5) rem(23);
+			}
+		}
+	}
+
+	.txt_box {
+		padding: 0;
+		margin: rem(10) 0 rem(20) 0;
+
+		.tit {
+			font-size: em(18);
+			color: #222;
+			font-weight: 400;
+		}
+		.date {
+			font-size: em(16);
+			color: #888888;
+			font-weight: 300;
+		}
+	}
+}
+
+//뽐내기 갤러리
+.section-showoff {
+	.img_box {
+		position: relative;
+		._icon {
+			img {
+				width: rem(50);
+				height: rem(50);
+			}
+		}
+	}
+}
+
+//서치
+.board-search-01 {
+	width: 100%;
+	border: none;
+	padding: 20px rem(10);
+	.select-type-01 {
+		width: rem(180);
+		height: 3.125rem;
+		font-size: rem(18);
+		padding-left: rem(30);
+		margin: 0 5px;
+	}
+	.input-type-01 {
+		padding: 1.5rem 0;
+		width: 40%;
+		padding-left: rem(10);
+
+		@include mdq-max(sm) {
+			width: 100%;
+		}
+	}
+	.btn {
+		width: rem(140);
+		height: 3.125rem;
+		background-color: #666666;
+		color: #fff;
+		font-size: rem(18);
+		margin: 0 5px;
+	}
+	@include mdq-max(sm) {
+		.select-type-01,
+		.btn {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+}
+
+//미디어
+.page-midea {
+	.img_board_list {
+		li {
+			.img_box {
+				@include img-to-bg(percentage(840/572));
+			}
+		}
+	}
+}

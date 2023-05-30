@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* Made by Masstige */
+.common-text--54 {
+  font-size: 3.375em;
+}
+.common-text--50 {
+  font-size: 3.125em;
+}
+.common-text--42 {
+  font-size: 2.625em;
+  letter-spacing: -0.03em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.common-text--40 {
+  font-size: 2.5em;
+  letter-spacing: -0.02em;
+}
+.common-text--26 {
+  font-size: 1.625em;
+  letter-spacing: -0.03em;
+}
+.common-text--36 {
+  font-size: 2.25em;
+  line-height: 1.1111111111;
+}
+.common-text--34 {
+  font-size: 2.125em;
+  letter-spacing: -0.03em;
+}
+.common-text--32 {
+  font-size: 2em;
+  letter-spacing: -0.03em;
+}
+.common-text--30 {
+  font-size: 1.875em;
+}
+.common-text--28 {
+  font-size: 1.75em;
+  letter-spacing: -0.03em;
+}
+.common-text--26 {
+  font-size: 1.625em;
+}
+.common-text--24 {
+  font-size: 1.5em;
+  letter-spacing: -0.03em;
+}
+.common-text--22 {
+  font-size: 1.375em;
+  letter-spacing: -0.03em;
+}
+.common-text--20 {
+  font-size: 1.25em;
+  line-height: 1.6666666667;
+  letter-spacing: -0.03em;
+}
+.common-text--18 {
+  font-size: 1.125em;
+  line-height: 1.6666666667;
+  letter-spacing: -0.03em;
+  color: #666666;
+}
+.common-text--16 {
+  font-size: 1em;
+  line-height: 1.625;
+  letter-spacing: -0.03em;
+}
+.common-text--14 {
+  font-size: 0.875em;
+  letter-spacing: -0.03em;
+}
+
+/*common*/
+.text-bold {
+  font-weight: 700;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.gap2 {
+  gap: 2rem;
+}
+
+.gap3 {
+  gap: 3rem;
+}
+
+.gap4 {
+  gap: 4.5rem;
+}
+
+.main-video .scroll-down {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  text-align: right;
+  color: white;
+  font-size: 0.75em;
+  font-weight: regular;
+}
+.main-video .scroll-down .mousey {
+  width: 3px;
+  padding: 2px 8px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.main-video .scroll-down .mousey .scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 1.8s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+  position: absolute;
+  left: 45%;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+.main-visual-crtl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 4.0625em;
+}
+.main-visual-crtl .crtl-inner {
+  color: #fff;
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  background-color: rgba(44, 44, 44, 0.2);
+  border-radius: 50px;
+  padding: 0.5rem;
+  margin-left: 20px;
+}
+.main-visual-crtl .swiper-pagination-fraction {
+  display: flex;
+}
+.main-visual-crtl .swiper-pagination-fraction .swiper-pagination-current {
+  text-align: center;
+  width: 0.8em;
+  line-height: 1.5rem;
+}
+.main-visual-crtl .swiper-pagination-fraction .swiper-pagination-total {
+  text-align: center;
+  width: 0.8em;
+  line-height: 1.5rem;
+}
+.main-visual-crtl .swiper-button {
+  font-size: 1.5rem;
+  position: relative;
+  transform: none;
+}
+.main-visual-crtl .swiper-button--next {
+  margin-right: 0;
+  right: 0;
+  padding-left: 0.5rem;
+}
+.main-visual-crtl .swiper-button--prev {
+  margin-left: 0;
+  left: 0;
+  padding-right: 0.5rem;
+}
+@media all and (max-width: 1400px) {
+  .main-visual-crtl .swiper-button {
+    display: block !important;
+  }
+}
+@media all and (max-width: 1400px) {
+  .main-visual-crtl {
+    margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .main-visual-crtl {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.section1 .container {
+  max-width: 1280px;
+}
+.section1 .buttons {
+  font-family: "GmarketSans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  font-weight: 500;
+  color: #666;
+  font-size: 1.125em;
+}
+.section1 .buttons a:hover {
+  color: #333;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.section1 .tit {
+  font-size: 3.625em;
+  font-family: "GmarketSans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  font-weight: 500;
+}
+.section1 .desc {
+  font-size: 1em;
+  font-weight: light;
+  letter-spacing: -0.03em;
+  color: #666;
+}
+.section1 #modern {
+  background-color: #f9f9f9;
+}
+.section1 #modern .modern-item1 .tit:after {
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  content: "모던";
+  font-size: 1.625rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  padding-left: 1rem;
+  color: #666;
+}
+.section1 #modern .modern-item3 {
+  position: absolute;
+  right: 0;
+}
+@media all and (max-width: 1400px) {
+  .section1 #modern .modern-item3 {
+    position: relative;
+  }
+}
+.section1 #classic .classic-item1 .tit:after {
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  content: "클래식";
+  font-size: 1.625rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  padding-left: 1rem;
+  color: #666;
+}
+.section1 #stylish {
+  background-color: #f9f9f9;
+}
+.section1 #stylish .stylish-item1 .tit:after {
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  content: "스타일리쉬";
+  font-size: 1.625rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  padding-left: 1rem;
+  color: #666;
+}
+.section1 #stylish .stylish-item2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+/*# sourceMappingURL=solution.css.map */

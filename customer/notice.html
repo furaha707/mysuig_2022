@@ -1,0 +1,140 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+    $P_dp2 = '1';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/customer.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<div id="notice">
+			<? include "../include/sub-nav.html" ?>
+		</div>
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-20" id="contents">
+			<section class="section section-notice pb-10 pt-md-0 pt-10">
+				<div class="container">
+					<!-- S : 목록 -->
+					<table class="table_board_for type_d">
+						<caption>
+							<span class="hidden">일반 게시판 입니다.</span>
+						</caption>
+						<colgroup>
+							<col width="8%" />
+							<col width="*%;" />
+							<col width="8%;" />
+							<col width="15%;" />
+							<col width="8%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">번호</th>
+								<th scope="col">제목</th>
+								<th scope="col">첨부파일</th>
+								<th scope="col">등록일</th>
+								<th scope="col">조회수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- S : 등록된 게시물이 없는 경우 노출 -->
+							<tr>
+								<td class="no_data" colspan="5">등록된 게시물이 없습니다.</td>
+							</tr>
+							<!-- E : 등록된 게시물이 없는 경우 노출 -->
+							<tr class="">
+								<td class="number">
+									<i class="xi-volume-up" title="공지"></i>
+								</td>
+								<td class="text_left">
+									<a href="notice__view.html"> 제목이 노출 됩니다. </a>
+								</td>
+								<td>
+									<a href="../pop/file-download.html" class="popup-link">
+										<i class="xi-file-download"></i>
+									</a>
+								</td>
+								<td class="date">2021.12.30</td>
+								<td class="keep">154</td>
+							</tr>
+							<tr class="">
+								<td class="number">10</td>
+								<td class="text_left">
+									<a href="notice__view.html"> 제목이 노출 됩니다. </a>
+								</td>
+								<td>
+									<a href="javascript:;" download="">
+										<i class="xi-file-download"></i>
+									</a>
+								</td>
+								<td class="date">2021.12.30</td>
+								<td class="keep">655</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- S : 목록 -->
+
+					<!-- S : 페이징 -->
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="prev"><span>이전으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="active">1<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">2<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">3<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next"><span>다음으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 페이징 -->
+
+					<!-- S : 검색영역 -->
+					<div class="board-search-01 border-0">
+						<form method="POST" action="?" id="searchForm">
+							<fieldset class="d-flex flex-sm-row flex-column align-items-center justify-content-center">
+								<legend class="hidden">검색</legend>
+								<select name="find_field" title="search" class="select-type-01 col-auto">
+									<option value="title">제품명</option>
+									<option value="content">내용</option>
+								</select>
+								<input type="text" title="검색어" class="input-type-01" name="find_word" value="" />
+								<input type="submit" value="검색" class="btn btn-color-01 col-auto" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- E : 검색영역 -->
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

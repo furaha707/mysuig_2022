@@ -1,0 +1,69 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '4';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+
+	<body class="mypage-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : nav--mypage -->
+		<? include "../include/mypage-sub-nav.html" ?>
+		<!-- E : nav--mypage -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section py-lg-30 py-20">
+				<div class="container">
+					<h1 class="sub-main__title mb-10">마이페이지</h1>
+					<div class="d-block d-lg-flex">
+						<ul class="mypage-list d-lg-block d-none">
+							<li class="list"><a href="./changeinfo_check.html">내정보수정</a></li>
+							<li class="list"><a href="./wishlist.html">위시리스트</a></li>
+							<li class="list"><a href="./inquiry.html">문의내역</a></li>
+							<li class="list active"><a href="./logout.html">회원탈퇴</a></li>
+						</ul>
+						<div class="w-100">
+							<p class="myform__tit myform__border common-text--24 font-weight-bold">회원탈퇴<span class="blue-dot"></span></p>
+							<div class="myform__text my-4 px-3">
+								<p class="common-text--17 font-weight-medium mb-2">탈퇴 시 주의사항</p>
+								<p class="des bg-gray-e p-4">내용 노출</p>
+							</div>
+							<form id="myform" class="px-3">
+								<div class="myform__item border-bottom border-gray-6 pt-3 pb-8">
+									<div class="agree_box my-2">
+										<input type="checkbox" name="yark" value="1" id="yark" title="회원탈퇴 동의합니다." class="mr_05" />
+										<label for="yark"><span class="text-color-2">[필수]</span> 동의 합니다.</label>
+									</div>
+									<input type="text" name="upw" id="upw" class="input_30" placeholder="비밀번호를 입력해주세요." />
+								</div>
+								<button type="submit" class="mypage-btn py-4 mt-10">탈퇴하기</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			// var list = $('.list');
+
+			// list.click(function () {
+			//   $(this).addClass('active');
+			//   list.not($(this)).removeClass('active');
+			// });
+		</script>
+	</body>
+</html>

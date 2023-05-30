@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+.section2 {
+	.text-box {
+		//height: rem(100);
+		padding-top: rem(10);
+		padding-bottom: rem(30);
+
+		@include mdq-max(md) {
+			//padding-bottom: 0;
+			padding-bottom: rem(20);
+			height: auto;
+		}
+	}
+}
+
+.section4 {
+	.best-bg {
+		background: url(../images/jungmun1/best_img_bg.jpg) no-repeat center;
+		background-size: cover;
+		height: 43em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include mdq-max(md) {
+			height: auto;
+			padding: 15vw rem(20);
+		}
+		.text-wrap {
+			max-width: rem(500);
+			//text-align: center;
+			//background-color: #0e0c09;
+			min-height: 31em;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			@include mdq-max(md) {
+				max-width: rem(400);
+				min-height: 24em;
+			}
+			@include mdq-max(sm) {
+			}
+			.text-line {
+				width: rem(280);
+			}
+		}
+	}
+}
+
+.section5 {
+	.text-wrap {
+		.img-txt {
+			text-align: center;
+			font-size: em(18);
+			font-weight: 500;
+			position: relative;
+			margin-bottom: rem(30);
+			display: none;
+
+			@include mdq-max(lg) {
+				display: block;
+				width: rem(230);
+				margin: 0 auto rem(30) auto;
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: rem(15);
+				height: rem(15);
+				border-radius: 50%;
+				background-color: transparent;
+				position: absolute;
+				left: -10%;
+			}
+
+			&-1 {
+				margin-bottom: rem(5);
+				&:before {
+					top: 50%;
+					transform: translateY(-50%);
+					border: 3px solid #e5831a;
+				}
+			}
+			&-2 {
+				&:before {
+					top: 5%;
+					border: 3px solid #3be51a;
+				}
+			}
+		}
+	}
+}
+
+.section5,
+.section6,
+.section7 {
+	.qna-line {
+		width: 1px;
+		height: 8em;
+		background-color: #aaaaaa;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+	.qna__contents {
+		background-color: #f7f7f7;
+		position: relative;
+		z-index: 1;
+	}
+	.image-box {
+		position: relative;
+		.image2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.text-wrap {
+		height: 10em;
+	}
+}
+
+//섹션추가
+.section-new {
+	.container {
+		max-width: rem(1000);
+	}
+	.box {
+		text-align: center;
+		margin: rem(70) 0;
+
+		.section-tit {
+			margin-bottom: rem(20);
+			.title {
+				font-size: em(32);
+				font-weight: 300;
+
+				@include mdq-max(md) {
+					font-size: em(26) !important;
+				}
+
+				.title-bold {
+					font-weight: 500;
+				}
+			}
+			.des {
+				font-size: em(18);
+				color: $gray-6;
+				margin-top: rem(5);
+			}
+		}
+	}
+	.box1 {
+		.section-tit {
+			margin-bottom: rem(20);
+			.title {
+				font-size: em(32);
+				font-weight: 300;
+
+				.title-point {
+					position: relative;
+					display: inline-block;
+
+					&:before {
+						content: '';
+						display: block;
+						background: url(../images/jungmun1/comma_i.png) no-repeat;
+						width: rem(21);
+						height: rem(15);
+						background-size: 100%;
+						position: absolute;
+						top: 0;
+						left: -11%;
+
+						@include mdq-max(md) {
+							width: rem(14);
+							height: rem(8);
+							padding-bottom: rem(5);
+							left: -10%;
+						}
+					}
+				}
+
+				.title-bold {
+					font-weight: 500;
+				}
+			}
+			.des {
+				font-size: em(18);
+				color: $gray-6;
+				margin-top: rem(5);
+				font-weight: 300;
+			}
+		}
+	}
+
+	.box2 {
+		.bullet-list {
+			max-width: rem(979);
+			width: 100%;
+			margin: 0 auto;
+			margin-top: rem(15);
+
+			.item {
+				font-size: em(18);
+				color: $gray-6;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.box3 {
+		.box-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			max-width: rem(950);
+			margin: 0 auto;
+
+			@include mdq-max(md) {
+				max-width: 100%;
+			}
+
+			.item {
+				flex: 1 0 50%;
+				max-width: 50%;
+
+				@include mdq-max(md) {
+					flex: 1 0 100%;
+					max-width: 100%;
+					margin-bottom: rem(25);
+				}
+
+				.des {
+					font-size: em(26);
+					font-weight: 300;
+
+					@include mdq-max(md) {
+						font-size: em(20);
+					}
+				}
+
+				.img-bx {
+					padding: 0 rem(25);
+
+					@include mdq-max(md) {
+						img {
+							width: 70%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.box4 {
+		.title-bold {
+			font-size: em(32);
+			color: #72a3eb;
+			font-weight: 500;
+
+			@include mdq-max(md) {
+				font-size: em(26) !important;
+			}
+		}
+		.des {
+			font-size: em(18);
+			color: $gray-6;
+			margin-top: rem(10);
+			text-align: left;
+			font-weight: 300;
+		}
+	}
+}
+
+/* .best_vs_img3 {
+	width: rem(272);
+}
+.best_vs_img4 {
+	width: rem(273);
+} */
+
+.best_vs_img3,
+.best_vs_img4 {
+	width: 70%;
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+@import 'customer/notice'; // 갤러리 페이지
+@import 'promotion/pr-view'; // 뷰 페이지
+
+@import 'customer/qna'; // q&a 페이지
+@import 'customer/faq'; // faq 페이지
+
+//as 페이지
+
+.table-as {
+	.table-btn-01 {
+		height: rem(40) !important;
+	}
+
+	.file-box {
+		.input_50,
+		.file-box__text {
+			height: rem(40) !important;
+		}
+	}
+
+	.btn-type-span {
+		display: inline-flex;
+		height: rem(40) !important;
+		background-color: #666;
+		color: #fff;
+		font-size: em(16);
+	}
+}

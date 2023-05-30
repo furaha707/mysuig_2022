@@ -1,0 +1,63 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+
+	<body class="mypage-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : nav--mypage -->
+		<? include "../include/mypage-sub-nav.html" ?>
+		<!-- E : nav--mypage -->
+
+		<!-- S : Main -->
+		<main class="main pt-20" id="contents">
+			<section class="section py-20">
+				<div class="container">
+					<h1 class="sub-main__title mb-10">마이페이지</h1>
+					<div class="d-block d-lg-flex">
+						<ul class="mypage-list d-lg-block d-none">
+							<li class="list active"><a href="./changeinfo_check.html">내정보수정</a></li>
+							<li class="list"><a href="./wishlist.html">위시리스트</a></li>
+							<li class="list"><a href="./inquiry.html">문의내역</a></li>
+							<li class="list"><a href="./logout.html">회원탈퇴</a></li>
+						</ul>
+						<div class="w-100">
+							<p class="myform__tit myform__border common-text--24 font-weight-bold">내정보수정<span class="blue-dot"></span></p>
+							<form id="myform" class="text-center">
+								<div class="myform__item py-10 my-8 bg-gray-e">
+									<p class="common-text--20 font-weight-bold pb-3">비밀번호 재확인</p>
+									<p class="common-text--16 text-muted mb-7">고객님의 정보를 안전하게 보호하기 위해<br />비밀번호를 다시 한번 확인합니다.</p>
+									<input type="text" name="upw" id="upw" class="input_30" placeholder="비밀번호를 입력해주세요." />
+								</div>
+								<button type="submit" class="mypage-btn py-4 mt-10">확인</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			// var list = $('.list');
+
+			// list.click(function () {
+			//   $(this).addClass('active');
+			//   list.not($(this)).removeClass('active');
+			// });
+		</script>
+	</body>
+</html>

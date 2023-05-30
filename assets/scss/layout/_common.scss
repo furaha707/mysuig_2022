@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.mypage-body {
+	padding-top: $nav-height;
+	@include mdq-max(lg) {
+		padding-top: $nav-height-lg;
+	}
+}
+
+.main-body,
+.sub-body {
+	overflow-x: hidden;
+}
+
+.sub-main {
+	overflow: hidden;
+}
+.main {
+	min-height: rem(600);
+}
+
+.main-policy {
+	min-height: rem(200);
+}
+
+//이미지 사이즈
+.text_img {
+	width: rem(400);
+}
+.text_img2 {
+	width: rem(92);
+}
+.service-mark-img {
+	width: rem(91);
+}

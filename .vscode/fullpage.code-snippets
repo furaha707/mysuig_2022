@@ -1,0 +1,32 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "javascript",
+		"prefix": "fullpage",
+		"body": [  
+			"var mainFullpage = new fullpage('.fullpage', {";
+			"	licenseKey: 'F67168A3-4AB64A38-A211B922-2DB1C3AC',";
+			"	menu: '.fullpage-nav',";
+			"	anchors: ['home', 'platform', 'pipeline', 'notice', 'license', 'foot'],";
+			"	scrollBar: true,";
+			"	//fixedElements: '#header',";
+			"	//paddingTop: '86px',";
+			"	responsiveWidth: 1200,";
+			"	//responsiveHeight: 800,";
+			"	scrollingSpeed: 600,";
+			"	easing: 'easeInOutCubic',";
+			"	easingcss3: 'ease',";
+			"	afterLoad: function (origin, destination, direction) {";
+			"		";
+			"	},";
+			"});";
+		],
+		"description": "fullpage"
+	},
+}

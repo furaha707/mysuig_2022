@@ -1,0 +1,471 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp0 = 'main';
+    include "../include/meta.html" 
+    ?>
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+
+	<body class="main-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main" id="contents">
+			<!-- 
+      TODO :  비디오
+      -->
+			<!--<section class="main-video">
+				<div class="video-wrap">
+					<video src="../assets/images/main/main_video.mp4" autoplay muted playsinline loop></video>
+				</div>
+				<div class="scroll-down d-flex flex-column align-items-end">
+					<p class="mb-2">SCROLL DOWN</p>
+					<p class="mousey">
+						<span class="scroller"></span>
+					</p>
+				</div>
+			</section> -->
+			<!-- S : main-visual -->
+			<section class="main-visual">
+				<h1 class="sr-only">메인비주얼 영역</h1>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<!-- pc: 1920x940 m: 1440x1850 -->
+
+						<!-- <div class="swiper-slide item">
+							<div class="main-video">
+								<div class="video-wrap">
+									<video src="../assets/images/main/main_video2.mp4" autoplay muted playsinline loop></video>
+								</div>
+							</div>
+						</div> -->
+
+						<div class="swiper-slide item">
+							<a href="#" class="link">
+								<div class="img-bx">
+									<img class="d-none d-md-block" src="../assets/images/main/main-visual.jpg" alt="pc 비주얼" />
+									<img class="d-block d-md-none" src="../assets/images/main/main-visual-m.jpg" alt="모바일 비주얼" />
+								</div>
+								<div class="txt-bx">
+									<div class="container">
+										<p class="text">
+											고객의 주거 공간에 품격과<br class="d-block d-md-none" />
+											안락함을 더해드립니다.
+										</p>
+										<h2 class="title">아이지 도어</h2>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-control">
+						<div class="container">
+							<div class="main-visual-crtl">
+								<div class="crtl-inner">
+									<button type="button" class="swiper-button swiper-button--prev">
+										<i class="xi-angle-left-thin"></i>
+									</button>
+									<div class="main-visual__pagination swiper-pagination-fraction">
+										<span class="swiper-pagination-current">1</span>
+										<span class="mx-2">/</span>
+										<span class="swiper-pagination-total">1</span>
+									</div>
+									<button type="button" class="swiper-button swiper-button--next">
+										<i class="xi-angle-right-thin"></i>
+									</button>
+								</div>
+								<div class="scroll-down d-flex flex-column align-items-end">
+									<p class="mb-2">SCROLL DOWN</p>
+									<p class="mousey">
+										<span class="scroller"></span>
+									</p>
+								</div>
+							</div>
+
+							<button type="button" class="swiper-button swiper-button--prev">
+								<i class="xi-angle-left-thin"></i>
+							</button>
+							<button type="button" class="swiper-button swiper-button--next">
+								<i class="xi-angle-right-thin"></i>
+							</button>
+
+							<!-- E : Swiper Navigation -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : main-visual -->
+
+			<!-- S : section1 -->
+			<section class="section section1 pt-20 pt-md-40 pb-15">
+				<div class="container">
+					<div class="intro-tit d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center mb-12">
+						<div class="one-way">One Way</div>
+						<div class="common-text--38 font-weight-light wow fadeInRight" data-wow-delay="0.2s">
+							<span class="font-weight-medium common-text--42">사람</span>과 더불어<br />
+							<span class="font-weight-medium common-text--42">조화로운 공간</span>을 연결합니다.
+						</div>
+					</div>
+					<div class="intro-img wow fadeInDown" data-wow-delay="0.3s">
+						<div class="row mx-n2 mx-lg-n5 mx-xl-n10">
+							<div class="col-12 col-md-4 px-2 px-lg-5 px-xl-10">
+								<div class="intro-img-wrapper mb-5 mb-md-0" id="intro-img1">
+									<div class="txt-absolute p-3">
+										<h6 class="intro-img-tit mt-13">20 years of History</h6>
+										<p class="intro-img-txt mt-3">
+											20년 오직 중문만으로<br class="d-none d-lg-block" />
+											행복한 공간 완성 시키고자<br class="d-none d-lg-block" />
+											지금도 한 길만 보며 나아가고 있습니다.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 px-2 px-lg-5 px-xl-10">
+								<div class="intro-img-wrapper mb-5 mb-md-0" id="intro-img2">
+									<div class="txt-absolute p-3">
+										<h6 class="intro-img-tit mt-13">Professional</h6>
+										<p class="intro-img-txt mt-3">
+											품질경영시스템 인증으로<br class="d-none d-lg-block" />
+											지속적인 품질향상을 통해 고객 만족을<br class="d-none d-lg-block" />
+											최우선으로 생각합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 px-2 px-lg-5 px-xl-10">
+								<div class="intro-img-wrapper" id="intro-img3">
+									<div class="txt-absolute p-3">
+										<h6 class="intro-img-tit mt-13">R&D</h6>
+										<p class="intro-img-txt mt-3">
+											끊임 없는 연구개발로<br class="d-none d-lg-block" />
+											다수의 특허기술을 보유,<br class="d-none d-lg-block" />
+											혁신적인 제품과 디자인을 위해 도전합니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section1 -->
+
+			<!-- S : section2 -->
+			<section class="section section2 pt-15 pb-10 pb-lg-15">
+				<div class="container">
+					<div class="section-tit text-center mb-15 wow fadeInDown" data-wow-delay="0.3s">
+						<h2 class="section-tit1 common-text--42">다양한 <span class="text-bold">중문디자인</span></h2>
+						<p class="section-tit2 common-text--18">'중문의 완성, 행복한 공간' 명성아이지</p>
+					</div>
+					<div class="swiper-container door-container">
+						<div class="swiper-control">
+							<div class="container d-flex align-items-center">
+								<div class="page font--sub font-weight-bold px-5">
+									<span class="now">4</span>
+									<span class="total ml-5">4</span>
+								</div>
+								<button type="button" class="swiper-button swiper-button--prev">
+									<i class="xi-angle-left-thin"></i>
+								</button>
+								<button type="button" class="swiper-button swiper-button--next ml-3">
+									<i class="xi-angle-right-thin"></i>
+								</button>
+							</div>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="d-flex justify-content-between flex-column flex-lg-row">
+									<div class="slide-img1 wow fadeInLeft" data-wow-delay="0.4s">
+										<a href=""><img src="../assets/images/main/slide1-1.jpg" alt="초베젤" /></a>
+									</div>
+									<div class="slide-txt-wrapper">
+										<div class="slide-txt wow fadeInUp" data-wow-delay="0.3s">
+											<span class="slide-number d-block">01</span>
+											<p class="mb-n2">더욱 더 슬림하게</p>
+											<p class="mb-n2"><span class="text-bold">0.7cm 프리미엄 도어</span></p>
+											<p>초베젤</p>
+										</div>
+										<div class="slide-img2 wow fadeInRight" data-wow-delay="0.4s">
+											<a href=""><img src="../assets/images/main/slide1-2.jpg" alt="초베젤" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="d-flex justify-content-between flex-column flex-lg-row">
+									<div class="slide-img1">
+										<a href=""><img src="../assets/images/main/slide1-1.jpg" alt="초베젤" /></a>
+									</div>
+									<div class="slide-txt-wrapper">
+										<div class="slide-txt">
+											<span class="slide-number d-block">02</span>
+											<p class="mb-n2">더욱 더 슬림하게</p>
+											<p class="mb-n2"><span class="text-bold">0.7cm 프리미엄 도어</span></p>
+											<p>초베젤</p>
+										</div>
+										<div class="slide-img2">
+											<a href=""><img src="../assets/images/main/slide1-2.jpg" alt="초베젤" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section2 -->
+
+			<!-- S : section3 -->
+			<section class="section section3 pt-0 pt-lg-15 pb-15 d-flex justify-content-end">
+				<div class="swiper-container side-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<p><img src="../assets/images/main/side-slide1.jpg" alt="슬라이드1" /></p>
+						</div>
+						<div class="swiper-slide">
+							<p><img src="../assets/images/main/side-slide2.jpg" alt="슬라이드1" /></p>
+						</div>
+						<div class="swiper-slide">
+							<p><img src="../assets/images/main/side-slide3.jpg" alt="슬라이드1" /></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section3 -->
+
+			<!-- S : section4 -->
+			<section class="section section4 pt-10 pt-md-15 pb-15 pb-lg-40">
+				<div class="container">
+					<div class="drama-des wow fadeInUp" data-wow-delay="0.3s">
+						<h2 class="common-text--42 text-center text-lg-left">드라마가 사랑한 <span class="text-bold">아이지도어 중문</span></h2>
+						<p class="common-text--18 pt-3 mb-10 mb-lg-0 text-center text-lg-left">
+							매일 보는 드라마도 아이지도어와 함께합니다. 감각적인 디자인으로 완성된 드라마 속 중문,<br class="d-none d-lg-block" />
+							TV 속 완벽한 인테리어의 완성은 아이지도어 중문이 있기 때문입니다.
+						</p>
+					</div>
+				</div>
+				<div class="container container--1720">
+					<a href="#none" class="more-btn">MORE<i class="xi-long-arrow-right"></i></a>
+					<div class="drama-wrap pt-15">
+						<div class="drama-photo d-none d-lg-flex text-center pr-xxl-10 pr-0 mt-20 wow fadeInDown" data-wow-delay="0.4s">
+							<div class="drama-photo__item">
+								<div class="img-bx"><img src="../assets/images/main/poster1.jpg" alt="꼰대인턴" /></div>
+								<p class="pt-3 common-text--20">꼰대인턴</p>
+							</div>
+							<div class="drama-photo__item">
+								<div class="img-bx"><img src="../assets/images/main/poster2.jpg" alt="저녁같이 드실래요" /></div>
+								<p class="pt-3 common-text--20">저녁같이 드실래요</p>
+							</div>
+							<div class="drama-photo__item">
+								<div class="img-bx"><img src="../assets/images/main/poster3.jpg" alt="악마판사" /></div>
+								<p class="pt-3 common-text--20">악마판사</p>
+							</div>
+						</div>
+						<div class="drama-poster wow fadeInDown" data-wow-delay="0.4s">
+							<p class="text-rotate">TV DRAMA & IGDOOR</p>
+							<div class="drama-poster__item d-none d-lg-block">
+								<div class="img-bx">
+									<img src="../assets/images/main/poster4.jpg" alt="빈센조" />
+								</div>
+								<p class="text common-text--26">빈센조</p>
+							</div>
+
+							<div class="drama-poster__item d-lg-none">
+								<div class="drama-poster-slider swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide item">
+											<div class="img-bx">
+												<img src="../assets/images/main/poster1.jpg" alt="꼰대인턴" />
+											</div>
+											<p class="text common-text--26">꼰대인턴</p>
+										</div>
+										<div class="swiper-slide item">
+											<div class="img-bx">
+												<img src="../assets/images/main/poster2.jpg" alt="저녁같이 드실래요" />
+											</div>
+											<p class="text common-text--26">저녁같이 드실래요</p>
+										</div>
+										<div class="swiper-slide item">
+											<div class="img-bx">
+												<img src="../assets/images/main/poster3.jpg" alt="악마판사" />
+											</div>
+											<p class="text common-text--26">악마판사</p>
+										</div>
+										<div class="swiper-slide item">
+											<div class="img-bx">
+												<img src="../assets/images/main/poster4.jpg" alt="빈센조" />
+											</div>
+											<p class="text common-text--26">빈센조</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section4 -->
+
+			<!-- S : section5 -->
+			<section class="section section5 pt-15 pt-md-30 pb-30 pb-md-40">
+				<div class="container">
+					<div class="section-tit text-center mb-12 mb-md-20">
+						<h2 class="section-tit1 common-text--42 wow fadeInUp">우리집<span class="text-bold"> 중문 뽐내기</span></h2>
+						<p class="section-tit2 common-text--18 pt-3 wow fadeInUp" data-wow-delay="0.2s">고객님의 생생한 리뷰를 확인해보세요</p>
+					</div>
+					<div class="d-flex justify-content-end">
+						<a href="#none" class="more-btn">MORE<i class="xi-long-arrow-right"></i></a>
+					</div>
+					<div class="row mx-n2 mx-lg-n5 mt-n4 mt-md-0">
+						<div class="col-12 col-sm-6 col-md-3 px-2 px-lg-5 mt-4 mt-md-0 wow fadeInUp" data-wow-delay="0.4s">
+							<div class="photo">
+								<img src="../assets/images/main/photo1.jpg" alt="포토1" />
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-3 px-2 px-lg-5 mt-4 mt-md-0 wow fadeInUp" data-wow-delay="0.6s">
+							<div class="photo">
+								<img src="../assets/images/main/photo2.jpg" alt="포토2" />
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-3 px-2 px-lg-5 mt-4 mt-md-10 wow fadeInUp" data-wow-delay="0.8s">
+							<div class="photo">
+								<img src="../assets/images/main/photo3.jpg" alt="포토3" />
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-3 px-2 px-lg-5 mt-4 mt-md-0 wow fadeInUp" data-wow-delay="1.0s">
+							<div class="photo">
+								<img src="../assets/images/main/photo4.jpg" alt="포토4" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section5 -->
+		</main>
+		<!-- S : quick-btn -->
+		<div class="quick-btn">
+			<div class="counsel d-flex flex-column justify-content-center align-items-center mb-20">
+				<i class="bi-chat-left-dots"></i>
+				<span>상담하기</span>
+			</div>
+			<button type="button" class="top d-flex flex-column align-items-center w-100 mt-3" onclick="$('html, body').animate({scrollTop: $('body').offset().top}, 500);">
+				<i class="xi-angle-up"></i>
+				<span>TOP</span>
+			</button>
+		</div>
+		<!-- E : quick-btn -->
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			var visualSwiper = new Swiper('.main-visual .swiper-container', {
+				loop: true,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true,
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.main-visual .swiper-pagination',
+					type: 'bullets',
+					clickable: true,
+					/*
+        TODO: .swiper-control--progress-no 적용 시에만 주석 해제
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
+        },
+        */
+				},
+				navigation: {
+					nextEl: '.main-visual .swiper-button--next',
+					prevEl: '.main-visual .swiper-button--prev',
+				},
+			});
+
+			var introSwiper = new Swiper('.section2 .swiper-container', {
+				loop: true,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true,
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				navigation: {
+					nextEl: '.section2 .swiper-button--next',
+					prevEl: '.section2 .swiper-button--prev',
+				},
+			});
+
+			var sideSwiper = new Swiper('.section3 .swiper-container', {
+				loop: true,
+				//effect: 'fade',
+				slidesPerView: 1.5,
+				spaceBetween: 10,
+				// fadeEffect: {
+				//   crossFade: true,
+				// },
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				breakpoints: {
+					1024: {
+						slidesPerView: 3,
+						spaceBetween: 25,
+					},
+				},
+			});
+
+			$(document).ready(function () {
+				if ($(window).innerWidth() < 1025) {
+					dramaSlider();
+				}
+			});
+			$(window).on('resize', function () {
+				if ($(window).innerWidth() < 1025) {
+					dramaSlider();
+				}
+			});
+
+			function dramaSlider() {
+				var posterSwiper = new Swiper('.drama-poster-slider', {
+					loop: true,
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false,
+					},
+				});
+			}
+
+			/* 메인 스와이퍼 페이징 */
+			var mainSlide = $('.main-visual .swiper-slide').not('.swiper-slide-duplicate').length;
+
+			$('.swiper-pagination-fraction .swiper-pagination-total').text(mainSlide);
+
+			visualSwiper.on('slideChange', function () {
+				var activeSlide = visualSwiper.realIndex + 1;
+
+				$('.swiper-pagination-fraction .swiper-pagination-current').text(activeSlide);
+			});
+
+			/* 인트로 스와이퍼 페이징 */
+			var slide = $('.section2 .swiper-slide').not('.swiper-slide-duplicate').length;
+
+			$('.page .total').text(slide);
+
+			introSwiper.on('slideChange', function () {
+				var activeSlide = introSwiper.realIndex + 1;
+
+				$('.page .now').text(activeSlide);
+			});
+		</script>
+	</body>
+</html>

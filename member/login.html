@@ -1,0 +1,72 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+
+	<body class="login-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-20" id="contents">
+			<section class="section pt-20">
+				<div class="container">
+					<div class="login__wrap">
+						<h1 class="sub-main__title mb-3">로그인</h1>
+						<p class="sub-main__txt mb-8">명성아이지에 오신걸 환영합니다.</p>
+						<div class="login__input">
+							<input type="text" class="input_for" placeholder="아이디를 입력해주세요." name="GetId" value="" />
+						</div>
+						<div class="login__input">
+							<input type="password" class="input_for" placeholder="비밀번호를 입력해주세요." name="GetPw" />
+						</div>
+						<label class="input-label input-label--checkbox">
+							<input type="checkbox" name="idsave" id="" />
+							<span class="input-label__txt font-weight-medium">아이디 저장</span>
+						</label>
+						<!-- S : 로그인 버튼 -->
+						<div class="login__btn-box mt-5">
+							<button type="button" class="login__btn py-5" id="loginSubmit">로그인</button>
+						</div>
+						<!-- E : 로그인 버튼 -->
+
+						<!-- S : 체크 항목 및 찾기 링크 -->
+						<div class="login__check mt-2">
+							<div class="login__check--left">
+								<a href="idpw_find.html" class="login-member-link">아이디/비밀번호찾기</a>
+							</div>
+							<div class="login__check--left">
+								<a href="join_form.html" class="login-member-link">회원가입하기</a>
+							</div>
+						</div>
+						<!-- E : 체크 항목 및 찾기 링크 -->
+
+						<div class="login-list login-list__sns mt-11">
+							<p class="login-list-txt mb-5">SNS 계정으로 간편하게 로그인 하세요.</p>
+							<div class="login-list-item">
+								<a href="join_naver.html" class="sns-btn login-naver">네이버</a>
+							</div>
+							<div class="login-list-item">
+								<a href="join_kakao.html" class="sns-btn login-kakao"> 카카오</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script></script>
+	</body>
+</html>

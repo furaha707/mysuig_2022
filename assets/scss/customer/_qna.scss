@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+//리스트 부분은 qna.scss 참고
+
+.faq-tab {
+	.tab-box {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin: 0 rem(-10);
+
+		@include mdq-max(lg) {
+			//내부 스크롤
+			text-align: center;
+			display: inline-block;
+			white-space: nowrap;
+			//font-size: 0;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			overflow-y: hidden;
+			width: 100%;
+		}
+
+		.item {
+			flex: 1;
+			padding: 0 rem(10);
+
+			@include mdq-max(lg) {
+				display: inline-block;
+				flex: none;
+				width: auto;
+				//margin: 0 5px;
+			}
+
+			.link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 0 rem(10);
+				height: rem(60);
+				background-color: #fff;
+				line-height: 1.2;
+				border: 1px solid #ccc;
+				font-size: em(18);
+				font-weight: 400;
+				color: #666666;
+
+				&.on {
+					background-color: $color-3;
+					border-color: $color-3;
+					color: #fff;
+				}
+			}
+		}
+		@include mdq-max(md) {
+			margin: 0 rem(-5);
+			.item {
+				padding: 0 rem(5);
+				.link {
+					word-break: break-all;
+				}
+			}
+		}
+	}
+}
+
+.section-qna {
+	.table-form-01 {
+		border-top: 1px solid #ccc;
+		.col_w {
+			width: 170px;
+		}
+		tr th {
+			background-color: #f9f9f9;
+			padding: 15px 17px;
+			font-size: em(15);
+
+			@include mdq-max(md) {
+				background-color: #fff;
+				padding: 5px 0;
+			}
+		}
+		tbody > tr {
+			.tit {
+				color: #666666;
+				padding-left: rem(27);
+			}
+			.input_for,
+			.input_30 {
+				height: rem(40);
+				max-width: 700px;
+			}
+			.area_for {
+				max-width: 700px;
+			}
+			.sel_for {
+				height: rem(40);
+			}
+		}
+		tbody > tr > th > span {
+			color: $color-2;
+		}
+	}
+	.btn-type-01 {
+		max-width: 160px;
+		height: 50px;
+	}
+}

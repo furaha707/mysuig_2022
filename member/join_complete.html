@@ -1,0 +1,40 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+
+	<body class="login-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main pt-20 pb-40" id="contents">
+			<section class="section pt-30">
+				<div class="container complete-wrap">
+					<div class="complete-item py-25">
+						<p><img src="../assets/images/sub/checked.png" alt="checked" /></p>
+						<p class="complete-txt pt-5">회원가입이 완료되었습니다.</p>
+					</div>
+					<div class="d-flex justify-content-center pt-10">
+						<a href="../main/main.html" class="main-btn py-4">메인으로 이동</a>
+						<a href="../member/login.html" class="login-btn py-4 ml-3">로그인하기</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script></script>
+	</body>
+</html>

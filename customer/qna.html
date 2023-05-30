@@ -1,0 +1,137 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '6';
+    $P_dp2 = '2';
+    $P_dp3 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/customer.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-20" id="contents">
+			<section class="section section-qna py-10 pt-lg-0">
+				<div class="container">
+					<ul class="clause_list">
+						<li>
+							<h5>개인정보처리방침</h5>
+							<div class="textarea_box_border">
+								<div class="textarea_box"><? include "../policy/privacy-text.html" ?></div>
+							</div>
+							<div class="agree_box mt_10">
+								<input type="checkbox" name="yark" value="1" id="yark" title="개인정보처리방침에 동의" class="mr_05" />
+								<label for="yark">개인정보처리방침에 동의합니다.</label>
+							</div>
+						</li>
+					</ul>
+					<p class="common-text--15 text-right text-gray-6 mb-2"><span class="text-color-2">*</span> 표시는 필수 입력 항목입니다.</p>
+					<table class="table-form-01 type_b">
+						<colgroup>
+							<col class="col_w" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>이름 <span>*</span></th>
+								<td>
+									<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="input_30" />
+								</td>
+							</tr>
+							<tr>
+								<th>연락처 <span>*</span></th>
+								<td>
+									<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="input_30" placeholder="-없이 숫자만 입력 (0101234567)" />
+								</td>
+							</tr>
+							<tr>
+								<th>이메일 <span>*</span></th>
+								<td>
+									<input type="text" name="umail" id="umail" title="이메일" maxlength="50" class="input_30" placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)" />
+								</td>
+							</tr>
+							<tr>
+								<th>문의유형 <span>*</span></th>
+								<td>
+									<div class="row mx-md-n4 mx-n2">
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="cost" title="비용" value="비용" />
+											<label for="cost" class="tit">비용</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="product" title="제품" value="제품" />
+											<label for="product" class="tit">제품</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="as" title="A/S" value="A/S" />
+											<label for="as" class="tit">A/S</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="construc" title="시공" value="시공" />
+											<label for="construc" class="tit">시공</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="order" title="주문" value="주문" />
+											<label for="order" class="tit">주문</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="cancle" title="취소/환불" value="취소/환불" />
+											<label for="cancle" class="tit">취소/환불</label>
+										</div>
+										<div class="col-auto px-md-4 px-2 py-md-0 py-1">
+											<input type="checkbox" name="path" id="etc" title="기타(쇼핑몰 이용방법)" value="기타(쇼핑몰 이용방법)" />
+											<label for="etc" class="tit">기타(쇼핑몰 이용방법)</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>제목 <span>*</span></th>
+								<td>
+									<input type="text" name="title" id="title" title="제목" maxlength="200" class="input_for" />
+								</td>
+							</tr>
+							<tr>
+								<th>내용 <span>*</span></th>
+								<td>
+									<textarea name="content" id="content" title="문의내용" class="area_for"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label for="info303">자동입력방지<br />코드 <span class="text-color-2">*</span></label>
+								</th>
+								<td>
+									<input type="hidden" maxlength="100" name="code_org" id="code_org" value="753035" />
+									<span class="code">753035</span>
+									<input type="text" name="imagecode" placeholder="자동입력방지 코드" id="imagecode" title="자동입력방지 코드" class="input_15" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="board_btn_bx text_center mt_30">
+						<input type="submit" value="문의하기 " class="btn-type-01" />
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

@@ -1,0 +1,191 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+
+	<body class="mypage-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : nav--mypage -->
+		<? include "../include/mypage-sub-nav.html" ?>
+		<!-- E : nav--mypage -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section py-20">
+				<div class="container">
+					<h1 class="sub-main__title mb-10">마이페이지</h1>
+					<div class="d-block d-lg-flex">
+						<ul class="mypage-list d-lg-block d-none">
+							<li class="list"><a href="./changeinfo_check.html">내정보수정</a></li>
+							<li class="list"><a href="./wishlist.html">위시리스트</a></li>
+							<li class="list active"><a href="./inquiry.html">문의내역</a></li>
+							<li class="list"><a href="./logout.html">회원탈퇴</a></li>
+						</ul>
+						<div class="wish-wrap inquiry-wrap">
+							<div class="d-flex align-items-center pb-4">
+								<p class="common-text--24 font-weight-bold wish__tit">문의내역<span class="blue-dot"></span></p>
+							</div>
+							<table class="table-form-01">
+								<colgroup>
+									<col width="13%" />
+									<col width="63%;" />
+									<col width="12%;" />
+									<col width="12%;" />
+									<col width="12%;" />
+								</colgroup>
+								<tr class="title-box">
+									<th>번호</th>
+									<th class="table-tit pl-lg-40">제목</th>
+									<th>작성자</th>
+									<th>등록일</th>
+									<th class="pl-sm-0 pl-6">상태</th>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-waiting">답변대기</span></td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="table-tit">
+										<a href="inquiry-view.html">프로젝트명 노출영역</a>
+									</td>
+									<td>홍*동</td>
+									<td>2021.12.20</td>
+									<td><span class="badge-complete">답변완료</span></td>
+								</tr>
+							</table>
+							<div class="d-flex justify-content-end">
+								<a href="inquiry-write.html" class="btn-type-01 py-4 mt-5 rounded-lg">문의하기</a>
+							</div>
+							<div class="paging-area">
+								<ul>
+									<li>
+										<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="prev"><span>이전으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="active">1<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">2<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;">3<span></span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next"><span>다음으로</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			// var list = $('.list');
+
+			// list.click(function () {
+			//   $(this).addClass('active');
+			//   list.not($(this)).removeClass('active');
+			// });
+		</script>
+	</body>
+</html>

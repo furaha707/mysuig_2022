@@ -1,0 +1,27 @@
+<!-- S : sub-nav : bar -->
+<div class="container py-lg-25 py-10">
+	<div class="page-header row align-items-center justify-content-between" id="scrT">
+		<div class="page-title col-md col-12">
+			<? if ($P_dp2 != null) {?>
+			<h3 class="common-text--42"><?=${nav_.$P_dp1._.$P_dp2}?></h3>
+			<!-- <p class="common-text--18 mt-2 font-weight-light"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3._.$P_dp4}?></p> -->
+			<?}?>
+		</div>
+		<div class="page-sub-nav col-md col-12 mt-md-0 mt-3">
+			<div class="sub-nav sub-nav--bar sub-nav--sticky">
+				<div class="sub-nav__wrap">
+					<? if ($P_dp1 =='5' || $P_dp1 =='6') {?>
+					<ul class="sub-nav__inner sub-nav-clone--depth2">
+						<!-- active 된 메뉴의 depth2 clone 하기 -->
+					</ul>
+					<?}else{?>
+					<ul class="sub-nav__inner sub-nav-clone--depth3">
+						<!-- active 된 메뉴의 depth3 clone 하기 -->
+					</ul>
+					<?}?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- E : sub-nav : bar -->

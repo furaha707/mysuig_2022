@@ -1,0 +1,172 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '4';
+    $P_dp2 = '1';
+    $P_dp3 = '1';
+    $P_dp4 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/myhome.min.css" />
+	</head>
+	<body class="sub-body" id="myhome">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-20 myhome" id="contents">
+			<!-- S : section1-->
+			<section class="section section1 py-lg-30 py-20" id="modern">
+				<div class="container text-wrap">
+					<div class="text-box wow fadeInUp">
+						<span class="common-text--54 font-sub--m">Modern</span>
+						<span class="common-text--26 font-weight-light pl-2">모던</span>
+						<p class="common-text--16 font-weight-light my-2">깔끔하고 고급스럽게 다양한 주거공간에<br />잘 어울리는 아이지도어의 모던 스타일을 만나보세요.</p>
+					</div>
+				</div>
+				<div class="image-wrap wow fadeInDown">
+					<div class="image-box">
+						<div class="item item1">
+							<img src="../assets/images/jungmun2/myhome_img_1.jpg" alt="이미지" />
+						</div>
+						<div class="item item2">
+							<img src="../assets/images/jungmun2/myhome_img_2.jpg" alt="이미지" />
+						</div>
+						<div class="item item3">
+							<img src="../assets/images/jungmun2/myhome_img_3.jpg" alt="이미지" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section1-->
+
+			<!-- S : section2-->
+			<section class="seciton seciton2 py-10" id="classic">
+				<div class="container text-wrap my-15">
+					<div class="text-box wow fadeInUp">
+						<span class="common-text--54 font-sub--m">Classic</span>
+						<span class="common-text--26 font-weight-light pl-2">클래식</span>
+						<p class="common-text--16 font-weight-light my-2">
+							때로는 고전적이게 때로는 품위있게<br />
+							아이지 도어의 클래식 스타일을 만나보세요.
+						</p>
+					</div>
+				</div>
+				<div class="container wow fadeInDown">
+					<div class="d-flex align-items-end justify-content-start">
+						<div class="item">
+							<img src="../assets/images/jungmun2/myhome_img_4.jpg" alt="이미지" />
+						</div>
+						<div class="item item2">
+							<img src="../assets/images/jungmun2/myhome_img_5.jpg" alt="이미지" />
+						</div>
+					</div>
+				</div>
+				<div class="container container--wide mt-14 wow fadeInDown">
+					<div class="d-flex align-items-end justify-content-end">
+						<div class="item">
+							<img src="../assets/images/jungmun2/myhome_img_6.jpg" alt="이미지" />
+						</div>
+						<div class="item item2">
+							<img src="../assets/images/jungmun2/myhome_img_7.jpg" alt="이미지" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section2-->
+
+			<!-- S : section3-->
+			<section class="section section3 py-20" id="stylish">
+				<div class="container">
+					<div class="text-box wow fadeInUp my-15" data-wow-delay="0.3s">
+						<span class="common-text--54 font-sub--m">Stylish</span>
+						<span class="common-text--26 font-weight-light pl-2">스타일리쉬</span>
+						<p class="common-text--16 font-weight-light my-2">
+							독특하고 세련되게 자기만의 주거공간에<br />
+							아이지도어의 스타일리쉬 스타일을 만나보세요.
+						</p>
+					</div>
+					<div class="image-wrap wow fadeInDown d-flex flex-md-row flex-column justify-content-between align-items-center" data-wow-delay="0.3s">
+						<div class="image-box">
+							<div class="d-flex">
+								<div class="item item1 py-6 px-4">
+									<img src="../assets/images/jungmun2/myhome_img_8.jpg" alt="이미지" />
+								</div>
+								<div class="item item2 py-6 px-4">
+									<img src="../assets/images/jungmun2/myhome_img_9.jpg" alt="이미지" />
+								</div>
+							</div>
+							<div class="d-flex">
+								<div class="item item3 py-6 px-4">
+									<img src="../assets/images/jungmun2/myhome_img_10.jpg" alt="이미지" />
+								</div>
+								<div class="item item4 py-6 px-4">
+									<img src="../assets/images/jungmun2/myhome_img_11.jpg" alt="이미지" />
+								</div>
+							</div>
+						</div>
+						<div class="image-box pr-md-30 px-4">
+							<div class="item item5">
+								<img src="../assets/images/jungmun2/myhome_img_12.jpg" alt="이미지" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section3-->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+
+		<script>
+			var $mynav = $('#myhome .sub-nav--bar .link');
+			var $cont = $('.myhome > section');
+
+			$(document).ready(function () {
+				$('.sub-nav--bar .link').on('click', function () {
+					var data = $(this).attr('data-link'),
+						thisTop = $(data).offset().top;
+
+					$('body, html').stop().animate({ scrollTop: thisTop }, 600);
+
+					$cont.removeClass('active');
+					$(data).addClass('active');
+
+					return false;
+				});
+
+				$('.sub-nav--bar .link').on('mouseenter', function () {
+					//var thisKr = $(this).attr('data-kr');
+					$(this).find('.data-en').css('display', 'none');
+					$(this).find('.data-kr').css('display', 'block');
+					//$(this).find('.data-kr').fadeIn(200);
+
+					//console.log(thisKr);
+
+					//$(this).text(thisKr);
+				});
+				$('.sub-nav--bar .link').on('mouseleave', function () {
+					//	var thisEn = $(this).attr('data-en');
+
+					//$(this).find('.data-kr').fadeOut(0);
+					$(this).find('.data-en').css('display', 'block');
+					$(this).find('.data-kr').css('display', 'none');
+				});
+			});
+		</script>
+	</body>
+</html>

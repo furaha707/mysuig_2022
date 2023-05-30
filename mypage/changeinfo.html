@@ -1,0 +1,138 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/mypage.min.css" />
+	</head>
+
+	<body class="mypage-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : nav--mypage -->
+		<? include "../include/mypage-sub-nav.html" ?>
+		<!-- E : nav--mypage -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<section class="section py-20">
+				<div class="container">
+					<h1 class="sub-main__title mb-10">마이페이지</h1>
+					<div class="d-block d-lg-flex">
+						<ul class="mypage-list d-lg-block d-none">
+							<li class="list active"><a href="./changeinfo_check.html">내정보수정</a></li>
+							<li class="list"><a href="./wishlist.html">위시리스트</a></li>
+							<li class="list"><a href="./inquiry.html">문의내역</a></li>
+							<li class="list"><a href="./logout.html">회원탈퇴</a></li>
+						</ul>
+						<form name="myform" id="myform">
+							<div class="d-flex flex-md-row flex-column justify-content-between align-items-md-center pb-4">
+								<p class="common-text--24 font-weight-bold">기본정보 수정<span class="blue-dot"></span></p>
+								<p class="text-right text-muted common-text--16 pt-md-0 pt-2"><span class="mark">*</span> 표시는 필수 입력 항목입니다.</p>
+							</div>
+							<table class="table-form-01 type_join">
+								<colgroup>
+									<col class="w_150" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>아이디 <span class="ml-1 mark">*</span></th>
+										<td>abcd123</td>
+									</tr>
+									<tr>
+										<th>이름 <span class="ml-1 mark">*</span></th>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<th>휴대폰 번호 <span class="ml-1 mark">*</span></th>
+										<td>
+											<input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" />
+										</td>
+									</tr>
+									<tr>
+										<th>비밀번호 <span class="ml-1 mark">*</span></th>
+										<td>
+											<input type="text" name="uname" id="uname" class="input_for" />
+										</td>
+									</tr>
+									<tr>
+										<th>비밀번호 확인 <span class="ml-1 mark">*</span></th>
+										<td>
+											<input type="text" name="uname" id="uname" class="input_for" />
+										</td>
+									</tr>
+									<tr>
+										<th>이메일 <span class="ml-1 mark">*</span></th>
+										<td>
+											<input type="text" name="email" id="email" title="이메일" value="" class="input_for" chk="email_check" placeholder="@ 포함해서 입력 (aaa@aaa.co.kr)" />
+										</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>
+											<div class="input_find clearfix">
+												<input type="text" name="uaddr1" id="uaddr1" class="input_30" />
+												<a href="#" class="table-btn-01">우편번호</a>
+											</div>
+											<div class="row mx-0">
+												<div class="col-12 px-0 mt-2">
+													<input type="text" class="input_for" name="uaddr2" id="uaddr2" title="기본주소" maxlength="200" value="" readonly="" placeholder="기본주소" onclick="daum_zipcode()" />
+												</div>
+												<div class="col-12 px-0 mt-2">
+													<input type="text" class="input_for" name="uaddr3" id="uaddr3" title="상세주소" maxlength="200" value="" placeholder="상세주소 입력" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>마케팅 수신</th>
+										<td>
+											<label class="input-label input-label--radio">
+												<input type="radio" name="radio1" required="" />
+												<span class="input-label__txt">수신 동의</span>
+											</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="link-wrap mt-10">
+								<p class="link__tit common-text--24 font-weight-bold pb-4">계정 연결 정보</p>
+								<ul class="link-item">
+									<li class="d-flex justify-content-between align-items-center border-bottom py-3">
+										<span class="d-flex align-items-center text-muted"><img src="../assets/images/sub/naver.png" alt="네이버" class="mr-5" /> 연결된 정보가 없습니다.</span>
+										<span class="link-btn1 py-2 px-6"><a href="">연결하기</a></span>
+									</li>
+									<li class="d-flex justify-content-between align-items-center border-bottom py-3">
+										<span class="d-flex align-items-center text-muted"><img src="../assets/images/sub/kakao.png" alt="카카오" class="mr-5" /> YYYY-MM-DD HH:MM:SS 연결 완료 되었습니다.</span>
+										<span class="link-btn2 py-2 px-6"><a href="">연결해제</a></span>
+									</li>
+								</ul>
+							</div>
+							<button type="submit" class="mypage-btn py-4 mt-10">저장</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			// var list = $('.list');
+
+			// list.click(function () {
+			//   $(this).addClass('active');
+			//   list.not($(this)).removeClass('active');
+			// });
+		</script>
+	</body>
+</html>

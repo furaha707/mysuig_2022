@@ -1,0 +1,278 @@
+//뉴스 뷰페이지
+@charset "UTF-8";
+
+.pm-view {
+	.btn-type-01 {
+		background-color: #fff;
+		color: #222;
+		border: 1px solid #666;
+		max-width: 150px;
+		height: 50px;
+		@include mdq-max(xs) {
+			max-width: 100%;
+			width: 100%;
+		}
+		&.event-btn {
+			width: 150px;
+			@include mdq-max(xs) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+	.table-view-01 {
+		table-layout: fixed;
+		width: 100%;
+		border-bottom: solid 1px #ddd;
+
+		.tit {
+			font-size: em(18);
+			color: #000;
+		}
+		> thead,
+		> tbody {
+			> tr:first-child {
+				> th,
+				> td {
+					padding-top: 1em;
+					padding-bottom: 1em;
+					border-top: solid 1px #222;
+				}
+			}
+		}
+
+		> thead,
+		> tbody {
+			> tr {
+				> th,
+				> td {
+					padding: 10px 8px;
+					vertical-align: top;
+					border-top: solid 1px #ddd;
+				}
+			}
+		}
+
+		> thead > tr > th,
+		> tbody > tr > th {
+			color: #333;
+			text-align: left;
+			font-weight: 500;
+		}
+
+		.blue {
+			color: #5d9ad3;
+		}
+
+		.text_left {
+			text-align: left;
+		}
+
+		.addfile_txt {
+			padding-left: 35px;
+			background: url(../images/icon/file_i.png) no-repeat 0 50%;
+
+			@include mdq-max(lg) {
+				padding-left: 20px;
+				background-size: 15px;
+			}
+		}
+
+		> tbody > tr > td .board-box {
+			min-height: 150px;
+			text-align: initial;
+
+			&.box1 {
+				background-color: #ebebeb;
+				min-height: 300px;
+			}
+		}
+
+		.tit_box p,
+		.tit {
+			&.tit,
+			&.txt {
+				float: left;
+				font-size: rem(18);
+
+				&.txt {
+					font-size: rem(16);
+					color: #666;
+				}
+
+				@include mdq-max(lg) {
+					float: none;
+					font-size: rem(16);
+				}
+
+				.tit-type {
+					padding-left: rem(20);
+					font-size: em(14);
+					color: #666666;
+				}
+			}
+
+			&.tbl_detail_span {
+				float: right;
+				color: $gray-6;
+
+				@include mdq-max(lg) {
+					float: none;
+					margin-top: rem(10);
+				}
+
+				span {
+					&:first-child:before {
+						display: none;
+					}
+
+					&:before {
+						display: inline-block;
+						overflow: hidden;
+						width: 1px;
+						height: 10px;
+						margin: -1px 7px 0 4px;
+						background: #bbb;
+						content: '';
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+
+	///*뷰페이지 이전/다음글 이동*/
+	.border-list-type {
+		border-top: solid 1px #999;
+		border-bottom: solid 1px #999;
+
+		li {
+			padding: rem(10) 0;
+			&:nth-child(1) {
+				border-bottom: solid 1px #c7c7c7;
+			}
+			position: relative;
+		}
+
+		.clearfix {
+			text-align: left;
+			display: flex;
+			align-items: center;
+			height: em(40);
+		}
+
+		.list-title {
+			flex-shrink: 0;
+			font-weight: 500;
+			// width: em(150);
+			padding: 0 50px;
+			color: #222;
+			background-repeat: no-repeat;
+			background-position: 24px center;
+			background-size: 12px;
+
+			@include mdq-max(md) {
+				padding: 0 25px 0 40px;
+				background-position: 15px center;
+				background-size: 10px;
+			}
+		}
+
+		.list-up-bg {
+			background-image: url('../images/icon/list-prev.png');
+		}
+
+		.list-down-bg {
+			background-image: url('../images/icon/list-next.png');
+		}
+
+		.w-con {
+			@include text-truncate(1);
+		}
+
+		.border-none {
+			border-bottom: none;
+		}
+	}
+	&.section-notice {
+		.tit {
+			font-size: em(16) !important;
+		}
+		i {
+			color: $color-3;
+			font-size: em(23);
+		}
+	}
+}
+
+.event-view {
+	.btn__wrap {
+		position: relative;
+
+		.link-box {
+			position: absolute;
+			bottom: 50%;
+			transform: translateY(-20%);
+			right: 10%;
+			border: 1px solid #ccc;
+			width: 22em;
+			height: 11em;
+			text-align: left;
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			padding: rem(5) rem(20);
+			display: none;
+
+			&.on {
+				display: flex;
+			}
+
+			@include mdq-max(md) {
+				right: 0;
+				left: 0;
+			}
+
+			@include mdq-max(sm) {
+				right: 0;
+			}
+			.close-btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding-top: 10px;
+				padding-right: 10px;
+				font-size: rem(18);
+			}
+			.sns-box {
+				a {
+					padding: 0 rem(4);
+					img {
+						border-radius: 50%;
+						width: rem(34);
+						height: rem(34);
+					}
+				}
+			}
+		}
+		.copy-box {
+			.btn-type-01 {
+				min-width: 4em;
+				max-width: 4em;
+				width: 4em;
+				background-color: #000;
+				color: #fff;
+				font-size: em(12);
+				height: 3.3em;
+			}
+			.link-box__text {
+				width: 15em;
+				overflow: hidden;
+
+				@include text-truncate(2, 1.3);
+			}
+		}
+	}
+}

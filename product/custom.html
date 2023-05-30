@@ -1,0 +1,337 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/custom.min.css" />
+	</head>
+	<body class="sub-body sub-body--page">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-20" id="contents">
+			<section class="section pb-20 pt-lg-0 pt-20">
+				<div class="container">
+					<!-- S : 필터-->
+					<div class="filter__wrap">
+						<div class="filter__title row justify-content-between align-items-center no-gutters">
+							<h3 class="common-text--22 font-weight-medium pl-4 my-5 col-auto">필터</h3>
+							<button type="button" class="form-btn pr-4 col-auto"></button>
+						</div>
+						<form action="" method="post">
+							<div class="filter__form">
+								<div class="row justify-content-center h-100">
+									<!-- S : 용도별-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">용도별</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="room1" title="현관" value="현관" />
+												<label for="room1" class="tit">현관</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="room2" title="드레스룸" value="드레스룸" />
+												<label for="room2" class="tit">드레스룸</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="room3" title="알파룸" value="알파룸" />
+												<label for="room3" class="tit">알파룸</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="room4" title="주방" value="주방" />
+												<label for="room4" class="tit">주방</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="other" title="기타" value="기타" />
+												<label for="other" class="tit">기타</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 용도별-->
+
+									<!-- S : 사이즈-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">사이즈(가로)</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="size1" title="1,000mm 미만" value="1,000mm 미만" />
+												<label for="size1" class="tit">1,000mm 미만</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="size2" title="1,000mm~1,600mm" value="1,000mm~1,600mm" />
+												<label for="size2" class="tit">1,000mm~1,600mm</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="size3" title="1,600mm~2,000mm" value="1,600mm~2,000mm" />
+												<label for="size3" class="tit">1,600mm~2,000mm</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="size4" title="2,000mm~4,000mm" value="2,000mm~4,000mm" />
+												<label for="size4" class="tit">2,000mm~4,000mm</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="size5" title="4,000mm~5,400mm" value="4,000mm~5,400mm" />
+												<label for="size5" class="tit">4,000mm~5,400mm</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 사이즈-->
+
+									<!-- S : 유리타입-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">유리타입</h6>
+											<div class="filter__item d-flex">
+												<div>
+													<input type="checkbox" name="path" id="glass1" title="15mm 페어유리(복층/2장, 알루미늄 단열간봉)" value="15mm 페어유리(복층/2장, 알루미늄 단열간봉)" />
+													<label for="glass1" class="tit"></label>
+												</div>
+												<span class="tit">15mm 페어유리 (복층/2장, 알루미늄 단열간봉)</span>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="glass2" title="안전접합유리(복층/2장)" value="안전접합유리(복층/2장)" />
+												<label for="glass2" class="tit">안전접합유리(복층/2장)</label>
+											</div>
+											<div class="filter__item d-flex">
+												<div>
+													<input type="checkbox" name="path" id="glass3" title="24mm 강화페어유리 (복층, 강화유리 2장, 알루미늄 단열간봉)" value="24mm 강화페어유리 (복층, 강화유리 2장, 알루미늄 단열간봉)" />
+													<label for="glass3" class="tit"></label>
+												</div>
+
+												<span class="tit">24mm 강화페어유리<br />(복층, 강화유리 2장, 알루미늄 단열간봉)</span>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="glass4" title="6.8mm 망입유리" value="6.8mm 망입유리" />
+												<label for="glass4" class="tit">6.8mm 망입유리</label>
+											</div>
+											<div class="filter__item d-flex">
+												<div><input type="checkbox" name="path" id="glass5" title="유리 1장(일반 4mm / 강화 5mm)" value="유리 1장(일반 4mm / 강화 5mm)" /><label for="glass5" class="tit"></label></div>
+												<span class="tit">유리 1장(일반 4mm / 강화 5mm)</span>
+											</div>
+										</div>
+									</div>
+									<!-- E : 유리타입-->
+
+									<!-- S : 마감소재-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">마감소재</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="finishing1" title="AL+MDF (알루미늄+MDF)" value="AL+MDF (알루미늄+MDF)" />
+												<label for="finishing1" class="tit">AL+MDF (알루미늄+MDF)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="finishing2" title="AL+PVC (알루미늄+PVC)" value="AL+PVC (알루미늄+PVC)" />
+												<label for="finishing2" class="tit">AL+PVC (알루미늄+PVC)</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 마감소재-->
+
+									<!-- S : 프레임컬러-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">프레임 컬러</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="color1" title="불소도장(3도코팅)" value="불소도장(3도코팅)" />
+												<label for="color1" class="tit">불소도장(3도코팅)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="color2" title="랩핑(인테리어 필름)" value="랩핑(인테리어 필름)" />
+												<label for="color2" class="tit">랩핑(인테리어 필름)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="color3" title="아노다이징" value="아노다이징" />
+												<label for="color3" class="tit">아노다이징</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 프레임컬러-->
+
+									<!-- S : 개폐방식-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">개폐방식</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type1" title="미닫이" value="미닫이" />
+												<label for="type1" class="tit">미닫이</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type2" title="여닫이" value="여닫이" />
+												<label for="type2" class="tit">여닫이</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type3" title="자동도어" value="자동도어" />
+												<label for="type3" class="tit">자동도어</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type4" title="행거도어 (하부 레일 없음)" value="행거도어 (하부 레일 없음)" />
+												<label for="type4" class="tit">행거도어 (하부 레일 없음)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type5" title="ㄱ자 파티션도어" value="ㄱ자 파티션도어" />
+												<label for="type5" class="tit">ㄱ자 파티션도어</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="type6" title="포켓도어" value="포켓도어" />
+												<label for="type6" class="tit">포켓도어</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 개폐방식-->
+
+									<!-- S : 프레임 두께-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">프레임 두께</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="thick1" title="2.8cm(초슬림)" value="2.8cm(초슬림)" />
+												<label for="thick1" class="tit">2.8cm(초슬림)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="thick2" title="1.4cm(베젤 & 울트라초슬림)" value="1.4cm(베젤 & 울트라초슬림)" />
+												<label for="thick2" class="tit">1.4cm(베젤 & 울트라초슬림)</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="thick3" title="0.7cm 초베젤" value="0.7cm 초베젤" />
+												<label for="thick3" class="tit">0.7cm 초베젤</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="opening4" title="행거도어 (하부 레일 없음)" value="행거도어 (하부 레일 없음)" />
+												<label for="opening4" class="tit">행거도어 (하부 레일 없음)</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 프레임 두께-->
+
+									<!-- S : 오픈방식-->
+									<div class="filter__box col-lg-3 col-sm-6 col-12">
+										<div class="filter__box--inner">
+											<h6 class="common-text--20 font-weight-medium mb-2">오픈방식</h6>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="open1" title="오픈형" value="오픈형" />
+												<label for="open1" class="tit">오픈형</label>
+											</div>
+											<div class="filter__item">
+												<input type="checkbox" name="path" id="open2" title="고시형(하단막힘)" value="고시형(하단막힘)" />
+												<label for="open2" class="tit">고시형(하단막힘)</label>
+											</div>
+										</div>
+									</div>
+									<!-- E : 오픈방식-->
+
+									<div class="filter__btn row justify-content-md-end justify-content-center align-items-md-end w-100">
+										<button type="button" class="btn-type-01 btn-reset col mx-1">초기화</button>
+										<button type="button" class="btn-type-01 btn-serach col mx-1">검색</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- E : 필터-->
+
+					<!-- S : 검색-->
+					<div class="board-search-01">
+						<form method="POST" action="?" id="searchForm">
+							<fieldset class="d-flex flex-sm-row flex-column align-items-center justify-content-center">
+								<legend class="hidden">검색</legend>
+								<select name="find_field" title="search" class="select-type-01 col-auto">
+									<option value="title">제품명</option>
+									<option value="content">내용</option>
+								</select>
+								<input type="text" title="검색어" class="input-type-01 col" name="find_word" value="" />
+								<input type="submit" value="검색" class="btn btn-color-01 col-auto" />
+							</fieldset>
+						</form>
+					</div>
+					<!-- E : 검색-->
+
+					<!-- S : 제품 리스트-->
+					<div class="product-list row justify-content-start align-items-center">
+						<? for ($i=0; $i<8; $i++) {?>
+						<div class="product-list__item col-xs-6 col-sm-4 col-lg-3">
+							<a class="inner" href="custom__view.html">
+								<!-- 
+									이미지 : 305 x 370
+								 -->
+								<div class="img-bx img-size">
+									<img src="../assets/images/custom/custom_img_1.jpg" alt="제품이미지" />
+								</div>
+								<div class="txt-bx">
+									<p class="pr-name">제품상제 노출영역 제품상제 노출영역제품 제품상제 노출영역 제품상제 노출영역제품</p>
+								</div>
+								<div class="more-bx d-flex align-items-end justify-content-between">
+									<p class="pr-view">자세히 보러가기</p>
+
+									<!-- 활성화시 on class 적용 -->
+								</div>
+							</a>
+							<button type="button" class="keep-btn"></button>
+						</div>
+						<?}?>
+					</div>
+					<!-- E : 제품 리스트-->
+
+					<!-- S : 페이지 -->
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="prev"><span>이전으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="active">1<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">2<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">3<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next"><span>다음으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 페이지 -->
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			$(document).ready(function () {
+				$('.form-btn').on('click', function () {
+					$(this).toggleClass('on');
+					$('.filter__form').stop(false, true).slideToggle(300);
+				});
+
+				$('.keep-btn').on('click', function () {
+					$(this).toggleClass('on');
+				});
+			});
+		</script>
+	</body>
+</html>

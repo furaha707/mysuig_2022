@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+@import 'promotion/pr-board'; // 갤러리 페이지
+@import 'promotion/pr-view'; // 뷰 페이지

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.sub-visual {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// font-family: $ff-eng-sans-serif;
+
+	&__wrapper {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		height: 940px;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		@include mdq-max(xl) {
+			height: 80vw;
+		}
+
+		@include mdq-max(md) {
+			height: 64vw;
+			font-size: 2.5vw;
+		}
+		// &.container {
+		// 	max-width: 1280px;
+		// }
+		.scroll-down {
+			position: absolute;
+			bottom: 5%;
+			right: 15%;
+			text-align: right;
+			color: white;
+			font-size: em(12);
+			font-weight: regular;
+
+			@include mdq-max(lg) {
+				display: none !important;
+			}
+
+			.mousey {
+				width: 3px;
+				padding: 2px 8px;
+				height: 30px;
+				border: 2px solid #fff;
+				border-radius: 25px;
+				opacity: 0.75;
+				box-sizing: content-box;
+				position: relative;
+				background-color: rgba(0, 0, 0, 0.2);
+				.scroller {
+					width: 3px;
+					height: 10px;
+					border-radius: 20px;
+					background-color: #fff;
+					animation-name: scroll;
+					animation-duration: 1.8s;
+					animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+					animation-iteration-count: infinite;
+					position: absolute;
+					left: 45%;
+				}
+				@keyframes scroll {
+					0% {
+						opacity: 0;
+					}
+					10% {
+						transform: translateY(0);
+						opacity: 1;
+					}
+					100% {
+						transform: translateY(15px);
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		width: 100%;
+		font-size: em(56);
+		letter-spacing: letterSpacing(-25);
+		line-height: 1.2;
+		font-weight: 400;
+		color: white;
+		text-align: left;
+	}
+	&__txt {
+		margin-top: 1em;
+		font-size: em(18);
+		font-weight: 300;
+	}
+}

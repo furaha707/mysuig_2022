@@ -1,0 +1,97 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '5';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+    ?>
+
+		<link rel="stylesheet" href="../assets/css/promotion.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<div class="mt-5" id="midea">
+			<? include "../include/sub-nav.html" ?>
+		</div>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main page-midea pb-30" id="contents">
+			<section class="section">
+				<div class="container">
+					<ul class="img_board_list">
+						<!-- S : 등록된 게시물이 없는 경우 -->
+						<li class="no_data py-15 px-4">등록된 게시물이 없습니다.</li>
+						<!-- E : 등록된 게시물이 없는 경우 -->
+						<? for ($i=0; $i<8; $i++) {?>
+						<li class="col-xs-6 col-sm-4 col-lg-3">
+							<a href="news__view.html">
+								<div class="img_box">
+									<!-- 572 x 840 -->
+									<img src="../images/board/3667619277_Hf7v9xKm_20220427011000.jpg" />
+								</div>
+								<div class="txt_box text-left">
+									<p class="tit">상품명 노출 영역</p>
+								</div>
+							</a>
+						</li>
+						<?}?>
+					</ul>
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="prev"><span>이전으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="active">1<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">2<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">3<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next"><span>다음으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="board-search-01 border-0">
+						<form method="POST" action="?" id="searchForm">
+							<fieldset class="d-flex flex-sm-row flex-column align-items-center justify-content-center">
+								<legend class="hidden">검색</legend>
+								<select name="find_field" title="search" class="select-type-01 col-auto">
+									<option value="title">제품명</option>
+									<option value="content">내용</option>
+								</select>
+								<input type="text" title="검색어" class="input-type-01" name="find_word" value="" />
+								<input type="submit" value="검색" class="btn btn-color-01 col-auto" />
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/custom.min.css" />
+	</head>
+	<body class="sub-body sub-body--page">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main sub-main pb-30" id="contents">
+			<!-- S : banner-top-->
+			<section class="section section1">
+				<div class="container">
+					<div class="section-title mb-10">
+						<div class="common-text--40 font-weight-normal">프리미엄 현관중문</div>
+						<div class="text-line"></div>
+						<p class="common-text--16 font-weight-light">
+							안전에 안전을 플러스하다.<br />
+							안전하고 고급스러운 중문 아이지도어에서 확인해보세요.
+						</p>
+					</div>
+					<div class="banner-top img-bx">
+						<img src="../assets/images/custom/banner-top-img.jpg" alt="제품이미지" />
+					</div>
+				</div>
+			</section>
+			<!-- E : banner-top-->
+
+			<!-- S : banner-bottom-->
+			<section class="seciton section2 pt-15 pt-md-30">
+				<div class="row no-gutters align-items-stretch justify-content-start px-lg-0 px-5">
+					<div class="col-12 col-lg-6">
+						<div class="banner-bottom img-bx">
+							<img src="../assets/images/custom/banner-bottom-img.jpg" alt="제품이미지" />
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 text-wrap">
+						<div class="text-bg">
+							<div class="text-bx">
+								<p class="title font-sub--l">Details</p>
+								<p class="des">더 얇은 프레임! 더 얇은 프레임!더 얇은 프레임!더 얇은 프레임!더 얇은 프레임!더 얇은 프레임!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : banner-bottom-->
+
+			<!-- S : tab-->
+			<section class="section section3 pt-15 pt-md-30">
+				<div class="container">
+					<div class="tab tab--box" data-tab="true" data-tab-active="on" data-tab-index="0" data-tab-mode="js">
+						<!-- S : 탭메뉴-->
+						<div class="tab-header" data-tab-header>
+							<div class="tab-item">
+								<a href="#none" class="link on" data-tab-item="">0.7cm 초베젤</a>
+							</div>
+							<div class="tab-item">
+								<a href="#none" class="link" data-tab-item="">1.4cm 베젤</a>
+							</div>
+							<div class="tab-item">
+								<a href="#none" class="link" data-tab-item="">탭3</a>
+							</div>
+							<div class="tab-item">
+								<a href="#none" class="link" data-tab-item="">탭4</a>
+							</div>
+							<div class="tab-item">
+								<a href="#none" class="link" data-tab-item="">추천제품</a>
+							</div>
+						</div>
+						<!-- E : 탭메뉴-->
+
+						<!-- S : 내용-->
+						<div class="tab-body" data-tab-body="">
+							<div class="tab-content" data-tab-content="">
+								<p class="des">내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출 내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용 노출내용</p>
+							</div>
+							<div class="tab-content" data-tab-content="">
+								<p class="des">웹 에디터 내용 노출</p>
+							</div>
+							<div class="tab-content" data-tab-content="">
+								<p class="des">웹 에디터 내용 노출</p>
+							</div>
+							<div class="tab-content" data-tab-content="">
+								<p class="des">웹 에디터 내용 노출</p>
+							</div>
+							<div class="tab-content" data-tab-content="">
+								<!-- S : 제품 리스트-->
+								<div class="product-list row justify-content-start align-items-center">
+									<? for ($i=0; $i<4; $i++) {?>
+									<div class="product-list__item col-xs-6 col-sm-4 col-lg-3">
+										<a class="inner" href="custom__view.html">
+											<!-- 
+									이미지 : 305 x 370
+								 -->
+											<div class="img-bx img-size">
+												<img src="../assets/images/custom/custom_img_1.jpg" alt="제품이미지" />
+											</div>
+											<div class="txt-bx">
+												<p class="pr-name">제품상제 노출영역 제품상제 노출영역제품 제품상제 노출영역 제품상제 노출영역제품</p>
+											</div>
+											<div class="more-bx d-flex align-items-end justify-content-between">
+												<p class="pr-view">자세히 보러가기</p>
+												<button type="button" class="keep-btn"></button>
+											</div>
+										</a>
+									</div>
+									<?}?>
+								</div>
+								<!-- E : 제품 리스트-->
+							</div>
+						</div>
+						<!-- E : 내용-->
+					</div>
+				</div>
+			</section>
+			<!-- E : tab-->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

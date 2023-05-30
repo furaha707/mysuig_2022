@@ -1,0 +1,112 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../assets/css/member.min.css" />
+	</head>
+
+	<body class="login-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Main -->
+		<main class="main py-20" id="contents">
+			<section class="section pt-20">
+				<div class="container">
+					<div class="login__wrap">
+						<h1 class="sub-main__title mb-3">로그인</h1>
+						<p class="sub-main__txt mb-8">명성아이지에 오신걸 환영합니다.</p>
+						<form name="snsform" id="snsform">
+							<div class="login-list login-list__sns mt-11">
+								<div class="login-list-item">
+									<span class="sns-btn login-kakao">카카오</span>
+								</div>
+							</div>
+							<div class="login__input">
+								<input type="text" name="uname" id="uname" class="input_for" placeholder="이름" />
+							</div>
+							<div class="login__input">
+								<input type="tel" name="utel" id="utel" title="연락처" maxlength="50" class="input_for" onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" placeholder="연락처" />
+							</div>
+							<div class="login__input">
+								<input type="text" name="email" id="email" title="이메일" value="" class="input_for" chk="email_check" placeholder="이메일" />
+							</div>
+							<div class="agree_tit border mt-10 p-5 d-flex justify-content-between">
+								<div class="agree_tit--checkbox">
+									<input type="checkbox" id="info30" class="mr_05" />
+									<label for="info30"> [전체동의] <br class="d-block d-lg-none" />개인정보 수집/이용 및 마케팅 수신동의 </label>
+								</div>
+								<div class="d-flex align-items-center">
+									<button type="button" class="d-block xi-angle-left-thin agree_btn"></button>
+								</div>
+							</div>
+							<ul class="clause_list p-5">
+								<li>
+									<div class="agree_box">
+										<input type="checkbox" name="agree" value="1" id="info33" class="mr_05" />
+										<label for="info33">[필수] 개인정보취급방침 수집/이용 동의</label>
+									</div>
+									<div class="mt-3">
+										<div class="textarea_box">이용약관</div>
+									</div>
+								</li>
+								<li class="mt_30">
+									<div class="agree_box">
+										<input type="checkbox" name="agree2" value="1" id="info34" />
+										<label for="info34">[선택] 마케팅 수신동의</label>
+									</div>
+									<div class="mt-3">
+										<div class="textarea_box">개인정보처리방침</div>
+									</div>
+								</li>
+							</ul>
+							<!-- S : 로그인 버튼 -->
+							<div class="login__btn-box mt-5">
+								<button type="button" class="login__btn py-4" id="loginSubmit">동의하고 가입하기</button>
+							</div>
+							<!-- E : 로그인 버튼 -->
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/quick.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			$(document).ready(function () {
+				$('.agree_tit').addClass('active');
+				$('.clause_list').hide();
+				$('.agree_btn').click(function () {
+					$('.agree_tit').toggleClass('active');
+					if ($('.clause_list').is(':visible')) {
+						$('.clause_list').slideUp();
+					} else {
+						$('.clause_list').slideDown();
+					}
+				});
+			});
+			$('.agree_tit--checkbox').click(function () {
+				/* 전체동의 체크박스 */
+				if ($('#info30').is(':checked')) {
+					$('#info33').prop('checked', 'true');
+					$('#info34').prop('checked', 'true');
+				}
+
+				var total = $('input[type=checkbox]').length;
+				var checked = $('input[type=checkbox]:checked').length;
+
+				if (total != checked) $('input[type=checkbox]').prop('checked', false);
+				else $('input[type=checkbox]').prop('checked', true);
+			});
+		</script>
+	</body>
+</html>
